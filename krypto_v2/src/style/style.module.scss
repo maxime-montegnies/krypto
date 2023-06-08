@@ -1,56 +1,149 @@
 .navigation {
+  display: flex;
+  // background-color: black;
+  height: 110px;
 
-    display: flex;
-    // background-color: black;
-    height: 110px;
-
-    nav{
-        flex-grow:1;
-    }
+  nav {
+    flex-grow: 1;
+  }
 }
 
 .navigation_logo {
-    background-image: url('/images/LOGO_KRYPTOSTONE.png');
-    // flex-grow:1;
-    margin-top: 25px;
-    height: 38px;
-    width: 150px;
-    background-size: contain;
-    background-repeat: no-repeat;
+  background-image: url("/images/LOGO_KRYPTOSTONE.png");
+  // flex-grow:1;
+  margin-top: 25px;
+  height: 38px;
+  width: 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .navigation_items {
-    flex-grow: 1;
-    text-align: right;
-    margin-top: 27px;
+  flex-grow: 1;
+  text-align: right;
+  margin-top: 27px;
 
-    li {
-        
-        
-        display: inline-block;
-        a {
+  li {
+    display: inline-block;
+    a {
+      // background-color: #333;
+      color: white;
+      border-radius: 11px;
+      border: 1px solid #fff0;
+      margin: 0 5px;
+      padding: 0 10px;
+      display: block;
+      height: 32px;
+      line-height: 32px;
 
-            // background-color: #333;
-            color: white;
-            border-radius: 11px;
-            border: 1px solid #fff0;
-            margin: 0 5px;
-            padding: 0 10px;
-            display: block;
-            height: 32px;
-            line-height: 32px;
-            
-            
-            &.active {
-                border-color: #ffff;
-            }
-            text-decoration: none;
-            color: white;
-            &:visited {}
-        }
+      &.active {
+        border-color: #ffff;
+      }
+      text-decoration: none;
+      color: white;
+      &:visited {
+      }
     }
+  }
 }
 
 .footer {
-    background-color: aqua;
+  background-color: aqua;
+}
+
+.home_hero__section {
+  background-image: url("/images/HERO_SECTION.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+  height: 812px;
+  padding: 73px 0 0 64px;
+  color: white;
+  position: relative;
+  .home_hero__section_text {
+    width: 60%;
+    h2 {
+      font-size: 64px;
+      line-height: 64px;
+      /* or 100% */
+
+      letter-spacing: -0.04em;
+    }
+    p {
+      margin-top: 46px;
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+  .home_hero__section_nav {
+    margin-top: 46px;
+    li {
+      display: inline-block;
+      margin-right: 15px;
+      a {
+        padding: 6px 10px;
+        border: 1px solid #ffffff;
+        border-radius: 11px;
+        text-decoration: none;
+        &:visited {
+          color: inherit;
+        }
+      }
+    }
+  }
+  figure {
+    background-image: url("/images/home.hero.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 399.12px;
+    height: 671.25px;
+    right: 9px;
+    top: 60.25px;
+    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
+    border-radius: 30px;
+  }
+}
+.home_discover__pool {
+  .home_discover__pool__title {
+    text-align: center;
+    h3 {
+        font-size: 13px;
+        line-height: 18px;
+        color: #79FFAF;
+        text-transform: uppercase;
+    }
+    h2 {
+        font-size: 38px;
+        line-height: 44px;
+    }
+  }
+  .home_discover__pool__content{
+    display: flex;
+    gap: 10px;
+    margin-top: 74px;
+    li{
+        position: relative;
+        background-color: green;
+        // background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 37.5%, rgba(0, 0, 0, 0.9) 92.71%),url('/images/discover__pool_1.jfif');
+        // background-image: url(attr(img));
+        background-size: cover;
+        flex-grow: 1;
+        flex-basis: min-content;
+        border-radius: 30px;
+        height: 516px;
+        overflow: hidden;
+        padding: 18px;
+        &:after{
+            content:'';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 37.5%, rgba(0, 0, 0, 0.9) 92.71%);
+        }
+
+    }
+  }
 }

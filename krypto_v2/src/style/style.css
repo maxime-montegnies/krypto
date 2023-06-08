@@ -5,8 +5,9 @@
 
 html{
     font-family: "manrope";
+    font-weight: 400;
     background-color:#00120E;
-    color:#444;
+    color:#fff;
 }
 body{
     margin: 0;
@@ -24,7 +25,7 @@ body{
 }
 
 .appContainer{
-    max-width: 1100px;
+    max-width: 1360px;
     margin: auto;
     /* background-color: #00120E; */
 }
