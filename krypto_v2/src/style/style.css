@@ -1,0 +1,35 @@
+
+
+@import 'reset.css';
+@import 'fonts.css';
+
+html{
+    font-family: "manrope";
+    background-color:#00120E;
+    color:#444;
+}
+body{
+    margin: 0;
+    padding: 0;
+
+}
+#root{
+}
+
+.purpleSquare
+{
+    width: 200px;
+    height: 200px;
+    background-color: mediumpurple;
+}
+
+.appContainer{
+    max-width: 1100px;
+    margin: auto;
+    /* background-color: #00120E; */
+}
+
+content{
+    min-height: calc(100vh - 100px);
+    display: block;
+}
