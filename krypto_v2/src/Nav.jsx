@@ -26,9 +26,8 @@ export default function Nav({}) {
         <ul className={styles.navigation_items}>
           {nav.map(function (element, i) {
             return (
-              <li>
+              <li key={i}>
                 <NavLink
-                  key={i}
                   className={({ isActive }) => (isActive ? styles.active : "")}
                   to={element.path}
                 >

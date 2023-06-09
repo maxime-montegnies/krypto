@@ -4,11 +4,11 @@ import styles from './style/style.module.scss';
 
 const Layout = () => {
   return (
-    <div class="appContainer">
+    <div className="appContainer">
       <Nav />
-      <content>
+      <div className="mainContent">
         <Outlet />
-      </content>
+      </div>
       <footer>
         <h1>FOOTER</h1>
       </footer>
