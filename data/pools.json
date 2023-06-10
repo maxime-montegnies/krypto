@@ -1,0 +1,285 @@
+{
+    "pools": [
+        {
+            "id": "001",
+            "label": "Le Corbusier",
+            "img": "/images/pools/discover__pool_1.jfif",
+            "invested": true,
+            "title": "KS2Vest",
+            "investmentValue": 45680800,
+            "expertValue": 67515800,
+            "location": "Metz, France",
+            "creationDate": "10 juin 2023",
+            "numberOfNFTs":37153996,
+            "movementOver12Months": "12.84%",
+            "diversification": {
+                "location": "Diversification en France",
+                "detail": [
+                    "67 612m²",
+                    "41 sites",
+                    "176 lots"
+                ]
+            },
+            "initialShareValue": 1.4,
+            "currentShareValue": 1.82,
+            "expectedReturnPerYear": 0.1040,
+            "amountOfCurrentRents": 4385616,
+            "amountOfPotentialRents": 4752917,
+            "treasury": 3986223,
+            "potentialReturnPerYear": 0.1040
+            
+        },
+        {
+            "id": "002",
+            "label": "Eiffel",
+            "img": "/images/pools/discover__pool_2.jfif",
+            "invested": false,
+            "title": "KS2Vest",
+            "investmentValue": 45680800,
+            "expertValue": 67515800,
+            "location": "Metz, France",
+            "creationDate": "10 juin 2023",
+            "numberOfNFTs":37153996,
+            "movementOver12Months": "12.84%",
+            "diversification": {
+                "location": "Diversification en Europe",
+                "detail": [
+                    "67 612m²",
+                    "41 sites",
+                    "176 lots"
+                ]
+            },
+            "initialShareValue": 1,
+            "currentShareValue": 1.82,
+            "expectedReturnPerYear": 0.1040,
+            "amountOfCurrentRents": 4385616,
+            "amountOfPotentialRents": 4752917,
+            "treasury": 3986223,
+            "potentialReturnPerYear": 0.1040
+        },
+        {
+            "id": "003",
+            "label": "Lloyd Wright",
+            "img": "/images/pools/discover__pool_3.jfif",
+            "invested": false,
+            "title": "KS2Vest",
+            "investmentValue": 45680800,
+            "expertValue": 67515800,
+            "location": "Metz, France",
+            "creationDate": "10 juin 2023",
+            "numberOfNFTs":37153996,
+            "movementOver12Months": "12.84%",
+            "diversification": {
+                "location": "Diversification en France-Roumanie",
+                "detail": [
+                    "67 612m²",
+                    "41 sites",
+                    "176 lots"
+                ]
+            },
+            "initialShareValue": 1,
+            "currentShareValue": 1.82,
+            "expectedReturnPerYear": 0.1040,
+            "amountOfCurrentRents": 4385616,
+            "amountOfPotentialRents": 4752917,
+            "treasury": 3986223,
+            "potentialReturnPerYear": 0.1040
+        },
+        {
+            "id": "004",
+            "label": "Gaudi",
+            "img": "/images/pools/discover__pool_4.jfif",
+            "invested": false,
+            "title": "KS2Vest",
+            "investmentValue": 13250700,
+            "expertValue": 21033100,
+            "location": "?????",
+            "creationDate": "10 juin 2023",
+            "numberOfNFTs":37153996,
+            "movementOver12Months": "12.84%",
+            "diversification": {
+                "location": "Diversification Hotelerie",
+                "detail": [
+                    "18 332m²",
+                    "15 sites",
+                    "15 lots"
+                ]
+            },
+            "initialShareValue": 1,
+            "currentShareValue": 1.82,
+            "expectedReturnPerYear": "7.36% (par an)",
+            "amountOfCurrentRents": 4385616,
+            "amountOfPotentialRents": 4752917,
+            "treasury": 3986223,
+            "potentialReturnPerYear": 0.1040
+        },
+        {
+            "id": "005",
+            "label": "Bofill",
+            "img": "/images/pools/discover__pool_5.jfif",
+            "invested": false,
+            "title": "KS2Vest",
+            "investmentValue": 13250700,
+            "expertValue": 21033100,
+            "location": "?????",
+            "creationDate": "10 juin 2023",
+            "numberOfNFTs":37153996,
+            "movementOver12Months": "12.84%",
+            "diversification": {
+                "location": "Diversification Hotelerie",
+                "detail": [
+                    "18 332m²",
+                    "15 sites",
+                    "15 lots"
+                ]
+            },
+            "initialShareValue": 1,
+            "currentShareValue": 1.82,
+            "expectedReturnPerYear": "7.36% (par an)",
+            "amountOfCurrentRents": 4385616,
+            "amountOfPotentialRents": 4752917,
+            "treasury": 3986223,
+            "potentialReturnPerYear": 0.1040
+        },
+        {
+            "id": "006",
+            "label": "Michel-Ange",
+            "img": "/images/pools/discover__pool_6.jfif",
+            "invested": false,
+            "title": "KS2Vest",
+            "investmentValue": 13250700,
+            "expertValue": 21033100,
+            "location": "?????",
+            "creationDate": "10 juin 2023",
+            "numberOfNFTs":37153996,
+            "movementOver12Months": "12.84%",
+            "diversification": {
+                "location": "Diversification Hotelerie",
+                "detail": [
+                    "18 332m²",
+                    "15 sites",
+                    "15 lots"
+                ]
+            },
+            "initialShareValue": 1,
+            "currentShareValue": 1.82,
+            "expectedReturnPerYear": "7.36% (par an)",
+            "amountOfCurrentRents": 4385616,
+            "amountOfPotentialRents": 4752917,
+            "treasury": 3986223,
+            "potentialReturnPerYear": 0.1040
+        },
+        {
+            "id": "007",
+            "label": "Mansart",
+            "img": "/images/pools/discover__pool_7.jfif",
+            "invested": false,
+            "title": "KS2Vest",
+            "investmentValue": 13250700,
+            "expertValue": 21033100,
+            "location": "?????",
+            "creationDate": "10 juin 2023",
+            "numberOfNFTs":37153996,
+            "movementOver12Months": "12.84%",
+            "diversification": {
+                "location": "Diversification Hotelerie",
+                "detail": [
+                    "18 332m²",
+                    "15 sites",
+                    "15 lots"
+                ]
+            },
+            "initialShareValue": 1,
+            "currentShareValue": 1.82,
+            "expectedReturnPerYear": "7.36% (par an)",
+            "amountOfCurrentRents": 4385616,
+            "amountOfPotentialRents": 4752917,
+            "treasury": 3986223,
+            "potentialReturnPerYear": 0.1040
+        },
+        {
+            "id": "008",
+            "label": "Le Nôtre",
+            "img": "/images/pools/discover__pool_8.jfif",
+            "invested": false,
+            "title": "KS2Vest",
+            "investmentValue": 13250700,
+            "expertValue": 21033100,
+            "location": "?????",
+            "creationDate": "10 juin 2023",
+            "numberOfNFTs":37153996,
+            "movementOver12Months": "12.84%",
+            "diversification": {
+                "location": "Diversification Hotelerie",
+                "detail": [
+                    "18 332m²",
+                    "15 sites",
+                    "15 lots"
+                ]
+            },
+            "initialShareValue": 1,
+            "currentShareValue": 1.82,
+            "expectedReturnPerYear": "7.36% (par an)",
+            "amountOfCurrentRents": 4385616,
+            "amountOfPotentialRents": 4752917,
+            "treasury": 3986223,
+            "potentialReturnPerYear": 0.1040
+        },
+        {
+            "id": "009",
+            "label": "Gehry",
+            "img": "/images/pools/discover__pool_9.jfif",
+            "invested": false,
+            "title": "KS2Vest",
+            "investmentValue": 13250700,
+            "expertValue": 21033100,
+            "location": "?????",
+            "creationDate": "10 juin 2023",
+            "numberOfNFTs":37153996,
+            "movementOver12Months": "12.84%",
+            "diversification": {
+                "location": "Diversification Hotelerie",
+                "detail": [
+                    "18 332m²",
+                    "15 sites",
+                    "15 lots"
+                ]
+            },
+            "initialShareValue": 1,
+            "currentShareValue": 1.82,
+            "expectedReturnPerYear": "7.36% (par an)",
+            "amountOfCurrentRents": 4385616,
+            "amountOfPotentialRents": 4752917,
+            "treasury": 3986223,
+            "potentialReturnPerYear": 0.1040
+        },
+        {
+            "id": "010",
+            "label": "Hadid",
+            "img": "/images/pools/discover__pool_10.jfif",
+            "invested": false,
+            "title": "KS2Vest",
+            "investmentValue": 13250700,
+            "expertValue": 21033100,
+            "location": "?????",
+            "creationDate": "10 juin 2023",
+            "numberOfNFTs":37153996,
+            "movementOver12Months": "12.84%",
+            "diversification": {
+                "location": "Diversification Hotelerie",
+                "detail": [
+                    "18 332m²",
+                    "15 sites",
+                    "15 lots"
+                ]
+            },
+            "initialShareValue": 1,
+            "currentShareValue": 1.82,
+            "expectedReturnPerYear": "7.36% (par an)",
+            "amountOfCurrentRents": 4385616,
+            "amountOfPotentialRents": 4752917,
+            "treasury": 3986223,
+            "potentialReturnPerYear": 0.1040
+        }
+    ]
+}

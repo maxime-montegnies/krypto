@@ -1,0 +1,76 @@
+{
+    "misc": {
+        "decimalSeparator":",",
+        "thousandSeparator":"."
+    },
+    "notFound": {
+        "title":"This page doesn’t seem to exist...",
+        "subtitle":"NOT FOUND",
+        "text":"Come back soon we are working on it right now."
+    },
+    "home": {
+        "hero_title": "Invest in Sustainable Real Estate with Ease.",
+        "hero_text": "Our mission is to make sustainable real estate investment profitable, virtuous, and accessible to everyone through a Security Token.",
+        "hero_invest": "Start Investing",
+        "hero_learn": "Learn More",
+        "invest_title": "Discover Our Investment Pools",
+        "invest_subtitle": "Investment",
+        "info_title": "How Does the Kryptostone Ecosystem Work?",
+        "info_subtitle": "Information",
+        "why_title": "Why Invest with KryptoStone?",
+        "why_subtitle": "Information",
+        "who_title": "Who Are We?",
+        "who_subtitle": "Information",
+        "who_text": "KryptoStone is a French fintech company founded in 2021 by a team of experts in real estate investment and blockchain. We believe that blockchain technology can offer a solution to facilitate real estate investment by reducing entry barriers, providing greater transparency, and enhancing investment security.",
+        "join_title": "They Already Trust Us",
+        "join_subtitle": "Join the Community",
+        "partner_title": "Daily Supporters",
+        "partner_subtitle": "Partners",
+        "partner_text": "...and over 30 investors, property dealers, and real estate developers",
+        "press_title": "They Talk About Us",
+        "press_subtitle": "Press & Blog",
+        "press_text": "...and more than a dozen other media outlets",
+        "contact_title": "Need More Information?",
+        "contact_subtitle": "Contact"
+    },
+    "pools": {
+        "title": "Discover Our Investment Pools",
+        "subtitle": "Investment",
+        "text": "Find the opportunity that suits you in this selection of pools designed by our experts and exclusively available at KryptoStone.",
+        "soon": "More investment pools coming soon..."
+    },
+    "pool": {
+        "more": "View more Investment Pools",
+        "invest": "INVESTMENT",
+        "expertise": "Expertise at",
+        "initialValue": "Initial Value of the Share",
+        "currentValue": "Current Value of the Share",
+        "expectedReturn": "Expected Return",
+        "title": "Pool Details",
+        "subtitle": "Pool",
+        "text": "Learn more about this investment pool and the different buildings it includes through key information that helps you invest in this project.",
+        "text2": "Discover all the investment pools available on the <strong>KryptoStone</strong> platform.",
+        "backToPools": "Back to Pools",
+        "info": "Pool Information",
+        "sites": "Sites",
+        "creationDate": "Creation Date",
+        "numberOfNFTs": "Number of NFTs",
+        "initialShareValue": "Initial Share Value",
+        "currentShareValue": "Current Share Value",
+        "movementOver12Months": "Share Movement over 12 Months",
+        "investmentValue": "Investment Value",
+        "expertValue": "Expert Value",
+        "theoreticalCapitalGain": "Theoretical Capital Gain",
+        "amountOfCurrentRents": "Amount of Current Rents",
+        "amountOfPotentialRents": "Amount of Potential Rents",
+        "returnPerYear": "Return per Year",
+        "potentialReturnPerYear": "Potential Return per Year",
+        "treasury": "Treasury",
+        "perYear": "(per year)"
+        },
+    "marketplace": {
+        "title": "Buy on the secondary market",
+        "subtitle": "Investment",
+        "text": "Discover the KryptoStone NFTs available on the secondary market and join already active investment pools."
+    }
+}

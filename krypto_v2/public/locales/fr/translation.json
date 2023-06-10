@@ -1,0 +1,77 @@
+{
+    "misc": {
+        "decimalSeparator":".",
+        "thousandSeparator":" "
+    },
+    "notFound": {
+        "title":"Cette page ne semble pas exister...",
+        "subtitle":"PAS TROUVÉ",
+        "text":"Revenez bientôt nous y travaillons en ce moment."
+    },
+    "home": {
+        "hero_title": "Investissez dans l’immobilier durable en toute simplicité.",
+        "hero_text": "Notre mission est de rendre l'investissement immobilier durable, rentable, vertueux et accessible à tous, par le biais d'un Security Token.",
+        "hero_invest": "Commencez à investir",
+        "hero_learn": "En apprendre plus",
+        "invest_title": "Découvrez nos pools d’investissement",
+        "invest_subtitle": "Investissement",
+        "info_title": "Comment fonctionne l’écosystème Kryptostone ?",
+        "info_subtitle": "Information",
+        "why_title": "Pourquoi investir avec KryptoStone ?",
+        "why_subtitle": "Information",
+        "who_title": "Qui sommes-nous ?",
+        "who_subtitle": "Information",
+        "who_text": "KryptoStone est une fintech française créée en 2021 par une équipe d'experts du monde de l’investissement immobilier et de la blockchain. Nous croyons que la technologie blockchain peut offrir une solution pour faciliter l'investissement immobilier en réduisant les obstacles à l'entrée, en offrant une plus grande transparence et en renforçant la sécurité des investissements.",
+        "join_title": "Ils nous font déjà confiance",
+        "join_subtitle": "Rejoignez la communauté",
+        "partner_title": "Ils nous soutiennent au quotidien",
+        "partner_subtitle": "Partenaires",
+        "partner_text": "...et plus de 30 investisseurs, marchands de biens et promoteurs immobilier",
+        "press_title": "Ils parlent de nous",
+        "press_subtitle": "Press & Blog",
+        "press_text": "...et plus d’une dizaine d’autres médias",
+        "contact_title": "Besoin de plus d’informations ?",
+        "contact_subtitle": "Contact"
+    },
+    "pools": {
+        "title": "Découvrez nos pools d’investissement",
+        "subtitle": "Investissement",
+        "text": "Trouvez l’opportunité qui vous correspond dans cette sélection de pools conçues par nos experts et disponible en exclusivité chez KryptoStone.",
+        "soon": "D’autres pools d’investissement à venir bientôt..."
+    },
+    "pool": {
+        "more": "Voir plus de Pools d’investissements",
+        "invest": "INVESTISSEMENT",
+        "expertise": "Expertisé à",
+        "initialValue": "Valeur initial de l’action",
+        "currentValue": "Valeur actuel de l’action",
+        "expectedReturn": "Rendement attendu",
+        "title": "Détails de la pool",
+        "subtitle": "Pool",
+        "text": "Apprenez en plus sur cette pool d’investissement et les différents bâtiments qu’elle comprend via des informations clés vous aidant à investir dans ce projet.",
+        "text2": "Découvrez toutes les pools d’investissement disponible sur la plateforme <strong>KryptoStone</strong>.",
+        "backToPools": "Retourner aux pools",
+        "info":"Informations de la pool",
+        "sites":"Les sites",
+        "creationDate":"Date de création",
+        "numberOfNFTs":"Nombre de NFTs",
+        "initialShareValue":"Valeur intiale de l'action",
+        "currentShareValue":"Valeur actuelle de l'action",
+        "movementOver12Months":"Mouvement d’action sur 12 mois",
+
+        "investmentValue":"Valeur d’investissement",
+        "expertValue":"Valeur expertisée",
+        "theoreticalCapitalGain":"Plus value théorique",
+        "amountOfCurrentRents":"Montant des loyers actuels",
+        "amountOfPotentialRents":"Montant des loyers potentiels",
+        "returnPerYear":"Rendement par an",
+        "potentialReturnPerYear":"Rendement potentiel par an",
+        "treasury":"Trésorerie",
+        "perYear": "(par an)"        
+    },
+    "marketplace": {
+        "title": "Achetez sur le marché secondaire",
+        "subtitle": "Investissement",
+        "text": "Découvrez les NFT KryptoStone disponible sur le marché secondaire et rejoignez des pools d’investissement déjà actives."
+    }
+}
