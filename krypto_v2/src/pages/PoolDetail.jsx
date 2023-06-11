@@ -5,19 +5,29 @@ import styles from "../style/style.module.scss";
 import { NavLink } from "react-router-dom";
 import { formatEuro, formatPercent } from "../utils/Utils";
 import { Trans, useTranslation } from "react-i18next";
+import useApp from "../store/useApp";
+import { useEffect } from "react";
+import PoolCardDetails from "../components/Pool/PoolCardDetails";
 
 export default function PoolDetail(props) {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   const { id } = useParams();
   const pool = useFetch("http://localhost:8080/data/pool/" + id);
+  // Animation Observers
+  const setUpdateIntersectionObserver = useApp((state) => state.setUpdateIntersectionObserver)
+  useEffect(() => {
+    setUpdateIntersectionObserver()
+  }, [pool.isLoading]);
+  //
+
   return (
     <>
-      <div className={styles.section_header}>
-      <h3>{t("pool.subtitle")}</h3>
+      <div className={styles.section_header + " slide-in"}>
+        <h3>{t("pool.subtitle")}</h3>
         <header>
           <div className={styles.section_header_column}>
             <h1>
-            {t("pool.title")}
+              {t("pool.title")}
               <span />
               {!pool.isLoading && pool.data.label}
             </h1>
@@ -28,7 +38,8 @@ export default function PoolDetail(props) {
             <NavLink to="/pools" className={styles.button_green}>{t("pool.backToPools")}</NavLink>
           </div>
         </header>
-
+        <PoolCardDetails pool={pool}/>
+{/* 
         <div
           className={styles.section_frame__top + " " + styles.pool_detail_frame}
         >
@@ -68,15 +79,15 @@ export default function PoolDetail(props) {
                         <span>{pool.data.creationDate}</span>
                       </li>
                       <li>
-                      <p><Trans t={t}>pool.numberOfNFTs</Trans> :</p>
+                        <p><Trans t={t}>pool.numberOfNFTs</Trans> :</p>
                         <span>{pool.data.numberOfNFTs}</span>
                       </li>
                       <li>
-                      <p><Trans t={t}>pool.initialShareValue</Trans> :</p>
+                        <p><Trans t={t}>pool.initialShareValue</Trans> :</p>
                         <span>{formatEuro(pool.data.initialShareValue)}</span>
                       </li>
                       <li>
-                      <p><Trans t={t}>pool.currentShareValue</Trans> :</p>
+                        <p><Trans t={t}>pool.currentShareValue</Trans> :</p>
                         <span>
                           <b>{formatEuro(pool.data.currentShareValue)}</b>
                         </span>
@@ -96,8 +107,8 @@ export default function PoolDetail(props) {
               <h1 style={{ backgroundImage: "url('/images/Iconsax/note.svg')" }}><Trans t={t}>pool.info</Trans></h1>
               {pool.isLoading ? (
                 <>
-                  <ul style={{opacity:0.5}}>
-                  <li>
+                  <ul style={{ opacity: 0.5 }}>
+                    <li>
                       <p>Valeur d’investissement:</p>
                       <span></span>
                     </li>
@@ -129,10 +140,6 @@ export default function PoolDetail(props) {
                       <p>Trésorerie:</p>
                       <span></span>
                     </li>
-                    {/* <li>
-                  <p>Prévision de réduction du capital 2024:</p>
-                  <span>{pool.data.initialValue}</span>
-                </li> */}
                   </ul>
                 </>
               ) : (
@@ -145,59 +152,55 @@ export default function PoolDetail(props) {
                       </span>
                     </li>
                     <li>
-                    <p><Trans t={t}>pool.expertValue</Trans> :</p>
+                      <p><Trans t={t}>pool.expertValue</Trans> :</p>
                       <span>
                         <b>{formatEuro(pool.data.expertValue, t("misc.decimalSeparator"), t("misc.thousandSeparator"))}</b>
                       </span>
                     </li>
                     <li>
-                    <p><Trans t={t}>pool.theoreticalCapitalGain</Trans> :</p>
+                      <p><Trans t={t}>pool.theoreticalCapitalGain</Trans> :</p>
                       <span>
                         {formatEuro(pool.data.expertValue - pool.data.investmentValue, t("misc.decimalSeparator"), t("misc.thousandSeparator"))}
                       </span>
                     </li>
                     <li>
-                    <p><Trans t={t}>pool.amountOfCurrentRents</Trans> :</p>
+                      <p><Trans t={t}>pool.amountOfCurrentRents</Trans> :</p>
                       <span>
                         <span>{formatEuro(pool.data.amountOfCurrentRents, t("misc.decimalSeparator"), t("misc.thousandSeparator"))}</span>
                       </span>
                     </li>
                     <li>
-                    <p><Trans t={t}>pool.amountOfPotentialRents</Trans> :</p>
+                      <p><Trans t={t}>pool.amountOfPotentialRents</Trans> :</p>
                       <span>{formatEuro(pool.data.amountOfPotentialRents, t("misc.decimalSeparator"), t("misc.thousandSeparator"))}</span>
                     </li>
                     <li>
-                    <p><Trans t={t}>pool.returnPerYear</Trans> :</p>
+                      <p><Trans t={t}>pool.returnPerYear</Trans> :</p>
                       <span>
-                      {formatPercent((pool.data.amountOfPotentialRents - pool.data.amountOfCurrentRents) / pool.data.amountOfCurrentRents, t("misc.decimalSeparator"), t("misc.thousandSeparator"))}
+                        {formatPercent((pool.data.amountOfPotentialRents - pool.data.amountOfCurrentRents) / pool.data.amountOfCurrentRents, t("misc.decimalSeparator"), t("misc.thousandSeparator"))}
                       </span>
                     </li>
                     <li>
-                    <p><Trans t={t}>pool.potentialReturnPerYear</Trans> :</p>
+                      <p><Trans t={t}>pool.potentialReturnPerYear</Trans> :</p>
                       <span>
                         {formatPercent(pool.data.potentialReturnPerYear, t("misc.decimalSeparator"), t("misc.thousandSeparator"))}
                       </span>
                     </li>
                     <li>
-                    <p><Trans t={t}>pool.treasury</Trans> :</p>
+                      <p><Trans t={t}>pool.treasury</Trans> :</p>
                       <span>{formatEuro(pool.data.treasury, t("misc.decimalSeparator"), t("misc.thousandSeparator"))}</span>
                     </li>
-                    {/* <li>
-                  <p>Prévision de réduction du capital 2024:</p>
-                  <span>{pool.data.initialValue}</span>
-                </li> */}
                   </ul>
                 </>
               )}
             </div>
             <div>
               <h1 style={{ backgroundImage: "url('/images/Iconsax/buildings2.svg')" }} >
-              <Trans t={t}>pool.sites</Trans>
+                <Trans t={t}>pool.sites</Trans>
               </h1>
             </div>
           </div>
-          {/* <PoolCard element={pool.data} /> */}
         </div>
+      */}
       </div>
     </>
   );

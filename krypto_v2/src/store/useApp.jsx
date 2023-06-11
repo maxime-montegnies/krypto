@@ -3,6 +3,7 @@ import { subscribeWithSelector } from 'zustand/middleware'
 
 export default create(subscribeWithSelector((set) => {
     return {
+        updateIntersectionObserver: false,
         page: 'yolo',
         setPage: async (page) => {
             set((state) => {
@@ -11,6 +12,12 @@ export default create(subscribeWithSelector((set) => {
                     return { page: page }
                 }
                 return {}
+            })
+        },
+        setUpdateIntersectionObserver: () => {
+            set((state) => {
+                state.updateIntersectionObserver = !state.updateIntersectionObserver;
+                return { updateIntersectionObserver: state.updateIntersectionObserver }
             })
         },
     }

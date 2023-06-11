@@ -1,13 +1,3 @@
-:root {
-  --color_KRYPTO-GREEN: #b5d09f;
-  --color_KRYPTO-SEC: #2d584e;
-  --color_BACKGROUND: #00120e;
-  --color_BACKGROUND-LIGHT: #001712;
-  --color_BACKGROUND-LIGHT-2: #04251d;
-  --color_SMALL-TEXT: #79ffaf;
-  --color_BUTTON: #00ef8d;
-  --color_BACKGROUND-LIGHTER: #04251d;
-}
 
 p,
 span {
@@ -53,6 +43,7 @@ span {
   max-width: 1360px;
   margin: auto;
   top: 0;
+  padding: 0 10px;
   display: flex;
   // background-color: black;
   height: 110px;

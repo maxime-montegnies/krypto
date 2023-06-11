@@ -5,12 +5,13 @@ import PoolCard from "../components/Pool/PoolCard";
 import useIntersectionObserver from "../utils/useIntersectionObserver";
 import useFetch from "react-fetch-hook";
 import { useTranslation } from "react-i18next";
+import useApp from "../store/useApp";
 
-export default function Home({}) {
+export default function Home({ }) {
   // DATAS
   // const { isLoading, pools } = useFetch("https://randomuser.me/api");
   // const pools = useFetch('/data/pools.json');
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   const pools = useFetch("http://localhost:8080/data/pools?count=3");
   const partners = [
     "partner_01.png",
@@ -28,33 +29,37 @@ export default function Home({}) {
     "press_05.png",
   ];
 
-  const targets = useRef(new Set());
-  const [entries, setObservedNodes] = useIntersectionObserver({
-    threshold: 1.0,
-  });
+  // const targets = useRef(new Set());
+  // const [entries, setObservedNodes] = useIntersectionObserver({
+  //   threshold: 1.0,
+  // });
 
-  // ANIMATION
+  const setUpdateIntersectionObserver = useApp((state) => state.setUpdateIntersectionObserver)
   useEffect(() => {
-    setObservedNodes(() => [...targets.current]);
-    return () => {
-      console.warn("CLEAN 1!");
-    };
-  }, [setObservedNodes]);
-  useEffect(() => {
-    for (const entry of entries) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("appear");
+    setUpdateIntersectionObserver()
+  }, [pools.isLoading]);
 
-        setObservedNodes((observedNodes) =>
-          observedNodes.filter((node) => node !== entry.target)
-        );
-      }
-    }
-    return () => {
-      console.warn("CLEAN 2!");
-    };
-  }, [entries, setObservedNodes]);
-  // / ANIMATION
+  // // ANIMATION
+  // useEffect(() => {
+  //   setObservedNodes(() => [...targets.current]);
+  //   return () => {
+  //     console.warn("CLEAN 1!");
+  //   };
+  // }, [setObservedNodes]);
+  // useEffect(() => {
+  //   for (const entry of entries) {
+  //     if (entry.isIntersecting) {
+  //       entry.target.classList.add("appear");
+  //       setObservedNodes((observedNodes) =>
+  //         observedNodes.filter((node) => node !== entry.target)
+  //       );
+  //     }
+  //   }
+  //   return () => {
+  //     console.warn("CLEAN 2!");
+  //   };
+  // }, [entries, setObservedNodes]);
+  // // / ANIMATION
 
   return (
     <div>
@@ -65,9 +70,9 @@ export default function Home({}) {
           styles.section_frame__top +
           " " +
           styles.textured +
-          " fade-in"
+          " slide-in"
         }
-        ref={(element) => targets.current.add(element)}
+
       >
         <div className={styles.home_hero__section_text}>
           <h2>{t('home.hero_title')}</h2>
@@ -86,16 +91,16 @@ export default function Home({}) {
 
       <div className={styles.home_discover__pool}>
         <div
-          className={styles.home__title + " fade-in"}
-          ref={(element) => targets.current.add(element)}
+          className={styles.home__title + " slide-in"}
+
         >
           <h3>{t('home.invest_subtitle')}</h3>
           <h2>{t('home.invest_title')}</h2>
         </div>
 
         <div
-          className={styles.home_discover__pool__content + " fade-in"}
-          ref={(element) => targets.current.add(element)}
+          className={styles.home_discover__pool__content + " slide-in"}
+
         >
           {pools.isLoading ? (
             <ul>
@@ -124,7 +129,7 @@ export default function Home({}) {
               })}
               <li className={styles.pool_card_see_more}>
                 <NavLink to="/pools">
-                <span>{t('pool.more')}</span>
+                  <span>{t('pool.more')}</span>
                 </NavLink>
               </li>
             </ul>
@@ -133,8 +138,8 @@ export default function Home({}) {
       </div>
 
       <div
-        className={styles.home_discover__information + " fade-in"}
-        ref={(element) => targets.current.add(element)}
+        className={styles.home_discover__information + " slide-in"}
+
       >
         <div className={styles.home__title}>
           <h3>{t('home.info_subtitle')}</h3>
@@ -143,8 +148,8 @@ export default function Home({}) {
       </div>
 
       <div
-        className={styles.home_discover__information + " fade-in"}
-        ref={(element) => targets.current.add(element)}
+        className={styles.home_discover__information + " slide-in"}
+
       >
         <div className={styles.home__title}>
           <h3>{t('home.why_subtitle')}</h3>
@@ -215,9 +220,9 @@ export default function Home({}) {
 
       <div
         className={
-          styles.section_frame__bottom + " " + styles.textured + " fade-in"
+          styles.section_frame__bottom + " " + styles.textured + " slide-in"
         }
-        ref={(element) => targets.current.add(element)}
+
       >
         <div className={styles.home__title}>
           <h3>{t('home.who_subtitle')}</h3>
@@ -231,8 +236,8 @@ export default function Home({}) {
 
       <div className={styles.home_discover__information}>
         <div
-          className={styles.home__title + " fade-in"}
-          ref={(element) => targets.current.add(element)}
+          className={styles.home__title + " slide-in"}
+
         >
           <h3>{t('home.join_subtitle')}</h3>
           <h2>{t('home.join_title')}</h2>
@@ -241,16 +246,16 @@ export default function Home({}) {
 
       <div className={styles.home_discover__information}>
         <div
-          className={styles.home__title + " fade-in"}
-          ref={(element) => targets.current.add(element)}
+          className={styles.home__title + " slide-in"}
+
         >
           <h3>{t('home.partner_subtitle')}</h3>
           <h2>{t('home.partner_title')}</h2>
         </div>
       </div>
       <div
-        className={styles.home_partners + " fade-in"}
-        ref={(element) => targets.current.add(element)}
+        className={styles.home_partners + " slide-in"}
+
       >
         <ul>
           {partners.map(function (element, i) {
@@ -269,16 +274,16 @@ export default function Home({}) {
 
       <div className={styles.home_discover__information}>
         <div
-          className={styles.home__title + " fade-in"}
-          ref={(element) => targets.current.add(element)}
+          className={styles.home__title + " slide-in"}
+
         >
           <h3>{t('home.press_subtitle')}</h3>
           <h2>{t('home.press_title')}</h2>
         </div>
       </div>
       <div
-        className={styles.home_press + " fade-in"}
-        ref={(element) => targets.current.add(element)}
+        className={styles.home_press + " slide-in"}
+
       >
         <ul>
           {press.map(function (element, i) {
@@ -297,8 +302,8 @@ export default function Home({}) {
 
       <div className={styles.home_discover__information}>
         <div
-          className={styles.home__title + " fade-in"}
-          ref={(element) => targets.current.add(element)}
+          className={styles.home__title + " slide-in"}
+
         >
           <h3>{t('home.contact_subtitle')}</h3>
           <h2>{t('home.contact_title')}</h2>

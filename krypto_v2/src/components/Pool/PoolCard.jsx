@@ -47,7 +47,7 @@ export default function PoolCard(props) {
   const hasValue = props.hasValue;
   return (
     <div
-      className={styles.pool_card}
+      className={styles.pool_card + " fade-in"}
       style={{ backgroundImage: "url('" + element.img + "')" }}
     >
       {element.invested && (

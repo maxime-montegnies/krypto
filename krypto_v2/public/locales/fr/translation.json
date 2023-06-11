@@ -73,5 +73,15 @@
         "title": "Achetez sur le marché secondaire",
         "subtitle": "Investissement",
         "text": "Découvrez les NFT KryptoStone disponible sur le marché secondaire et rejoignez des pools d’investissement déjà actives."
+    },
+    "faq":{
+        "title":"F.A.Q. (Foire aux questions)",
+        "subtitle":"Informations",
+        "text":"Cette foire aux questions à pour but de vous apporter un maximum d’informations afin de profiter de l’expérience KryptoStone dans son entièreté."
+    },
+    "mint":{
+        "title":"Rejoignez une pool d’investissement",
+        "subtitle":"Investissement",
+        "text":"Découvrez le système de mint KryptoStone. Ce dernier vous permet de rejoindre une pool d’investissement et participer à l’évolution du projet."
     }
 }
