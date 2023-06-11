@@ -1,18 +1,17 @@
-import { useEffect, useState, useRef } from "react";
 import styles from "../style/style.module.scss";
 import { NavLink } from "react-router-dom";
 import PoolCard from "../components/Pool/PoolCard";
-import useIntersectionObserver from "../utils/useIntersectionObserver";
-import useFetch from "react-fetch-hook";
-import { useTranslation } from "react-i18next";
-import useApp from "../store/useApp";
+import { useTranslation, Trans } from "react-i18next";
+import useFetchData from "../utils/useFetchData";
+import HomeWhoWeAre from "../components/HomeWhoWeAre";
+import HomeTestimonials from "../components/HomeTestimonials";
 
 export default function Home({ }) {
   // DATAS
   // const { isLoading, pools } = useFetch("https://randomuser.me/api");
   // const pools = useFetch('/data/pools.json');
   const { t } = useTranslation();
-  const pools = useFetch("http://localhost:8080/data/pools?count=3");
+  const pools = useFetchData("http://localhost:8080/data/pools?count=3");
   const partners = [
     "partner_01.png",
     "partner_02.png",
@@ -29,38 +28,8 @@ export default function Home({ }) {
     "press_05.png",
   ];
 
-  // const targets = useRef(new Set());
-  // const [entries, setObservedNodes] = useIntersectionObserver({
-  //   threshold: 1.0,
-  // });
 
-  const setUpdateIntersectionObserver = useApp((state) => state.setUpdateIntersectionObserver)
-  useEffect(() => {
-    setUpdateIntersectionObserver()
-  }, [pools.isLoading]);
-
-  // // ANIMATION
-  // useEffect(() => {
-  //   setObservedNodes(() => [...targets.current]);
-  //   return () => {
-  //     console.warn("CLEAN 1!");
-  //   };
-  // }, [setObservedNodes]);
-  // useEffect(() => {
-  //   for (const entry of entries) {
-  //     if (entry.isIntersecting) {
-  //       entry.target.classList.add("appear");
-  //       setObservedNodes((observedNodes) =>
-  //         observedNodes.filter((node) => node !== entry.target)
-  //       );
-  //     }
-  //   }
-  //   return () => {
-  //     console.warn("CLEAN 2!");
-  //   };
-  // }, [entries, setObservedNodes]);
-  // // / ANIMATION
-
+  
   return (
     <div>
       <div
@@ -158,16 +127,10 @@ export default function Home({ }) {
         <div className={styles.home_whyinvest}>
           <ul>
             <li>
-              <h1
-                style={{ backgroundImage: "url('/images/Iconsax/award.svg')" }}
-              >
-                01. La <b>qualité</b> de nos acquisitions
+              <h1 style={{ backgroundImage: "url('/images/Iconsax/award.svg')" }} >
+                <Trans t={t}>home.invest_01_title</Trans>
               </h1>
-              <p>
-                Nous investissons dans des biens immobiliers de qualité, tels
-                que des friches, des terrains, des forêts, et des bâtiments
-                historiques, pour assurer des rendements solides à long terme.
-              </p>
+              <p>{t('home.invest_01_text')}</p>
             </li>
             <li>
               <h1
@@ -175,15 +138,9 @@ export default function Home({ }) {
                   backgroundImage: "url('/images/Iconsax/cardcoin.svg')",
                 }}
               >
-                02. L’association de l’<b>immobilier</b> et des{" "}
-                <b>actifs numériques</b>
+                <Trans t={t}>home.invest_02_title</Trans>
               </h1>
-              <p>
-                Grâce à la technologie blockchain, nous combinons
-                l’investissement immobilier traditionnel avec des actifs
-                numériques, offrant ainsi des opportunités d'investissement
-                uniques.
-              </p>
+              <p>{t('home.invest_02_text')}</p>
             </li>
             <li>
               <h1
@@ -191,14 +148,9 @@ export default function Home({ }) {
                   backgroundImage: "url('/images/Iconsax/activity.svg')",
                 }}
               >
-                03. <b>Investissement</b>, développement <b>durable</b> et{" "}
-                <b>sociétal</b>
+                <Trans t={t}>home.invest_03_title</Trans>
               </h1>
-              <p>
-                Notre approche holistique vise à créer de la valeur non
-                seulement pour nos investisseurs, mais aussi pour la société
-                dans son ensemble.
-              </p>
+              <p>{t('home.invest_03_text')}</p>
             </li>
             <li>
               <h1
@@ -206,13 +158,9 @@ export default function Home({ }) {
                   backgroundImage: "url('/images/Iconsax/building4.svg')",
                 }}
               >
-                04. L’<b>accessibilité</b> de l’investissement immobilier
+                <Trans t={t}>home.invest_04_title</Trans>
               </h1>
-              <p>
-                Chez KryptoStone, nous pensons que chacun devrait pouvoir
-                investir dans l'immobilier, à partir de quelques dizaines
-                d'euros seulement.
-              </p>
+              <p>{t('home.invest_04_text')}</p>
             </li>
           </ul>
         </div>
@@ -232,16 +180,17 @@ export default function Home({ }) {
         <div className={styles.home_whoweare}>
           <p>{t('home.who_text')}</p>
         </div>
+        <HomeWhoWeAre />
       </div>
 
       <div className={styles.home_discover__information}>
         <div
           className={styles.home__title + " slide-in"}
-
         >
           <h3>{t('home.join_subtitle')}</h3>
           <h2>{t('home.join_title')}</h2>
         </div>
+        <HomeTestimonials />
       </div>
 
       <div className={styles.home_discover__information}>

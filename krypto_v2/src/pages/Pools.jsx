@@ -1,22 +1,12 @@
-import { useParams } from "react-router-dom";
 import PoolCard from "../components/Pool/PoolCard";
-import useFetch from "react-fetch-hook";
 import styles from "../style/style.module.scss";
 import { useTranslation } from "react-i18next";
-import useApp from "../store/useApp";
-import { useEffect } from "react";
 import { SectionTitle } from "../components/SectionTemplates";
+import useFetchData from "../utils/useFetchData";
 
 export default function Pools(props) {
   const { t } = useTranslation();
-  const pools = useFetch("http://localhost:8080/data/pools?count=100");
-  // Animation Observers
-  const setUpdateIntersectionObserver = useApp((state) => state.setUpdateIntersectionObserver)
-  useEffect(() => {
-    setUpdateIntersectionObserver()
-  }, [pools.isLoading]);
-  //
-
+  const pools = useFetchData("http://localhost:8080/data/pools?count=100");
   return (
     <>
       <SectionTitle title={t("pools.title")} subtitle={t("pools.subtitle")} text={t("pools.text")} />

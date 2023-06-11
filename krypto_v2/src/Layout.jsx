@@ -2,6 +2,7 @@ import { useRef, useEffect } from "react";
 import { Outlet, Link, NavLink } from "react-router-dom";
 import Nav from "./Nav";
 import styles from "./style/style.module.scss";
+import Footer from "./Footer";
 // import Scrollbar from "react-smooth-scrollbar";
 let oldScroll = 0;
 const Layout = () => {
@@ -54,16 +55,7 @@ const Layout = () => {
         </div>
           <Outlet />
         </div>
-        <footer>
-          <ul className="footer_legals">
-            <li>© 2023 Kryptostone</li>
-            <li><a href="#" target="blank">Mentions légales</a></li>
-          </ul>
-          <ul className="footer_social">
-            <li><a href="https://twitter.com/KryptoStone_io" target="blank"><img src="/images/twitter.svg"/></a></li>
-            <li><a href="https://www.linkedin.com/company/kryptostone/" target="blank"><img src="/images/linkedin.svg"/></a></li>
-          </ul>
-        </footer>
+        <Footer />
       </div>
       {/* </Scrollbar> */}
     </>

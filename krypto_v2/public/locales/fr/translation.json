@@ -31,7 +31,15 @@
         "press_subtitle": "Press & Blog",
         "press_text": "...et plus d’une dizaine d’autres médias",
         "contact_title": "Besoin de plus d’informations ?",
-        "contact_subtitle": "Contact"
+        "contact_subtitle": "Contact",
+        "invest_01_title":"01. La <strong>qualité</strong> de nos acquisitions",
+        "invest_01_text":"Nous investissons dans des biens immobiliers de qualité, tels que des friches, des terrains, des forêts, et des bâtiments historiques, pour assurer des rendements solides à long terme.",
+        "invest_02_title":"02. L’association de l’<strong>immobilier</strong> et des <strong>actifs numériques</strong>",
+        "invest_02_text":"Grâce à la technologie blockchain, nous combinons l’investissement immobilier traditionnel avec des actifs numériques, offrant ainsi des opportunités d'investissement uniques.",
+        "invest_03_title":"03. <strong>Investissement</strong>, développement <strong>durable</strong> et <strong>sociétal</strong>",
+        "invest_03_text":"Notre approche holistique vise à créer de la valeur non seulement pour nos investisseurs, mais aussi pour la société dans son ensemble.",
+        "invest_04_title":"04. L’<strong>accessibilité</strong> de l’investissement immobilier",
+        "invest_04_text":"Chez KryptoStone, nous pensons que chacun devrait pouvoir investir dans l'immobilier, à partir de quelques dizaines d'euros seulement."
     },
     "pools": {
         "title": "Découvrez nos pools d’investissement",

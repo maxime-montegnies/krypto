@@ -7,6 +7,10 @@ var app = express();
 app.use(express.static("public"));
 
 //make way for some custom css, js and images
+app.use(function(req, res, next) {
+    setAccessOrigin(res);
+    next();
+  });
 app.use("/css", express.static(__dirname + "/css"));
 app.use("/js", express.static(__dirname + "/js"));
 app.use("/images", express.static(__dirname + "/images"));
@@ -19,8 +23,9 @@ const setAccessOrigin = (res) => {
     "Origin, X-Requested-With, Content-Type, Accept"
   );
 };
+
 app.get("/data/pool/:id", (req, res) => {
-  setAccessOrigin(res);
+//   setAccessOrigin(res);
   fs.readFile(__dirname + "/data/pools.json", "utf8", (err, data) => {
     if (err) {
       res.send(err);
@@ -44,7 +49,7 @@ app.get("/data/pool/:id", (req, res) => {
   });
 });
 app.get("/data/pools", (req, res) => {
-    setAccessOrigin(res);
+    // setAccessOrigin(res);
     let count = 10;
     if (req.query.count) count = parseInt(req.query.count);
     fs.readFile(__dirname + "/data/pools.json", "utf8", (err, data) => {
@@ -64,22 +69,22 @@ app.get("/data/pools", (req, res) => {
     });
   });
   
-  app.get("/data/faq", (req, res) => {
-    setAccessOrigin(res);
-    fs.readFile(__dirname + "/data/faq.json", "utf8", (err, data) => {
-      if (err) {
-        res.send(err);
-        return;
-      }
-      const json = JSON.parse(data);
-      const returnArray = [];
-      res.setHeader("Content-Type", "application/json");
-      json.data.forEach((element, i) => {
-          returnArray.push(element);
-      });
-      res.send(JSON.stringify(returnArray, null, 2));
-    });
-  });
+//   app.get("/data/faq", (req, res) => {
+//     setAccessOrigin(res);
+//     fs.readFile(__dirname + "/data/faq.json", "utf8", (err, data) => {
+//       if (err) {
+//         res.send(err);
+//         return;
+//       }
+//       const json = JSON.parse(data);
+//       const returnArray = [];
+//       res.setHeader("Content-Type", "application/json");
+//       json.data.forEach((element, i) => {
+//           returnArray.push(element);
+//       });
+//       res.send(JSON.stringify(returnArray, null, 2));
+//     });
+//   });
   
   const PORT = process.env.PORT || 8080;
 var server = app.listen(PORT, function () {

@@ -10,7 +10,6 @@ export default function Nav(props) {
     console.log('RENDER NAV')
 
     const { locale } = useContext(LocaleContext);
-
   function changeLocale (l) {
     if (locale !== l) {
       i18n.changeLanguage(l);
