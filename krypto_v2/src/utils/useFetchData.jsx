@@ -12,8 +12,6 @@ const useFetchData = (url, _observer) => {
   );
   useEffect(setUpdateIntersectionObserver, [data.isLoading]);
   useEffect(()=>{
-    console.log("LOADDDDD")
-    console.log(data)
   }, [data.isLoading]);
   // Animation Observers
   //

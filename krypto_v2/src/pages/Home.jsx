@@ -46,8 +46,7 @@ export default function Home({ }) {
         <div className={styles.home_hero__section_text}>
           <h2>{t('home.hero_title')}</h2>
           <p>{t('home.hero_text')}</p>
-        </div>
-        <ul className={styles.home_hero__section_nav}>
+          <ul className={styles.home_hero__section_nav}>
           <li>
             <NavLink to="/blogs">{t('home.hero_invest')}</NavLink>
           </li>
@@ -55,7 +54,12 @@ export default function Home({ }) {
             <NavLink to="/yolo">{t('home.hero_learn')}</NavLink>
           </li>
         </ul>
+        </div>
+        <div className={styles.home_hero__section_image}>
         <figure></figure>
+
+        </div>
+        
       </div>
 
       <div className={styles.home_discover__pool}>
