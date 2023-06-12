@@ -28,7 +28,6 @@ const observedNodes = document.querySelectorAll('.fade-in, .slide-in');
   observer = new IntersectionObserver((entries) => {
     for (const entry of entries) {
       if (entry.isIntersecting) {
-        console.log('okok')
         entry.target.classList.add("appear");
         observer.unobserve(entry.target)
         // setObservedNodes((observedNodes) =>
@@ -68,9 +67,7 @@ export default function App() {
       (value) => {
         // console.log(`SET PAGE ${value}`);
         // console.warn("!!!!! pools.isLoading changed")
-        console.warn('before updateObserver')
-        updateObserver()
-        console.warn('after updateObserver')
+        updateObserver();
       }
     );
     return () => {
