@@ -5,21 +5,15 @@ var express = require("express");
 console.log(process.env.npm_config_yolo)
 var app = express();
 
-const _public_folder = "public";
+const _public_folder = "dist";
 const _root_dirname = __dirname + "/" + _public_folder;
-app.use(express.static(_public_folder));
 
 //make way for some custom css, js and images
 app.use(function(req, res, next) {
-    setAccessOrigin(res);
-    next();
-  });
-// 
-app.use("/pools", express.static(_root_dirname + "/"));
-app.use("/marketplace", express.static(_root_dirname + "/"));
-app.use("/faq", express.static(_root_dirname + "/"));
-app.use("/mint", express.static(_root_dirname + "/"));
-app.use("/create_account", express.static(_root_dirname + "/"));
+  setAccessOrigin(res);
+  next();
+});
+app.use(express.static(_public_folder));
 // app.use("/data", express.static(_root_dirname + "/data"));
 // app.use("/css", express.static(__dirname + "/css"));
 // app.use("/js", express.static(__dirname + "/js"));
@@ -34,9 +28,6 @@ const setAccessOrigin = (res) => {
   );
 };
 
-// app.get("/", (req, res) => {
-//   res.send("Swag");
-// });
 app.get("/data/pool/:id", (req, res) => {
 //   setAccessOrigin(res);
   fs.readFile(_root_dirname + "/data/pools.json", "utf8", (err, data) => {
@@ -98,8 +89,7 @@ app.get("/data/pools", (req, res) => {
 //       res.send(JSON.stringify(returnArray, null, 2));
 //     });
 //   });
-// app.use("/*", express.static(_root_dirname + "/"));  
-// app.get("/*", (req, res) => { res.redirect(_root_dirname + "/index.htm");});  
+  
   const PORT = process.env.PORT || 8080;
 var server = app.listen(PORT, function () {
   //   console.log(process.env.PORT);

@@ -1,0 +1,46 @@
+{
+    "fr": [
+        {
+            "name": "Thierry Benedic",
+            "job": "CEO du groupe Benedic",
+            "text": "Je pense que la tokenisation immobilière est véritablement l’avenir de l’immobilier c’est pour cela que j’ai souhaité investir dans ce projet."
+        },
+        {
+            "name": "Bernard Schatteman",
+            "job": "Retraité",
+            "text": "J’ai toujours rêvés d’investir dans l’immobilier, c’est la première fois que l’immobilier m’est accessible !"
+        },
+        {
+            "name": "Vivien Nguyen",
+            "job": "Directeur des opérations",
+            "text": "Je suis ce projet depuis sa construction, je suis certain de la réussite de ce projet !"
+        },
+        {
+            "name": "Olivier Israel",
+            "job": "CEO Styntxa",
+            "text": "J’ai voulu rejoindre ce projet car j’ai déjà vue oeuvrer une partie de l’équipe, j’ai toute confiance dans l’équipe Kryptostone."
+        }
+    ],
+    "en": [
+        {
+            "name": "Thierry Benedic",
+            "job": "CEO of Benedic Group",
+            "text": "I believe that real estate tokenization is truly the future of real estate, which is why I wanted to invest in this project."
+        },
+        {
+            "name": "Bernard Schatteman",
+            "job": "Retiree",
+            "text": "I have always dreamed of investing in real estate, and this is the first time that real estate has been accessible to me!"
+        },
+        {
+            "name": "Vivien Nguyen",
+            "job": "Director of Operations",
+            "text": "I have been following this project since its construction, and I am certain of its success!"
+        },
+        {
+            "name": "Olivier Israel",
+            "job": "CEO of Styntxa",
+            "text": "I wanted to join this project because I have already seen part of the team in action, and I have complete trust in the KryptoStone team."
+        }
+    ]
+}

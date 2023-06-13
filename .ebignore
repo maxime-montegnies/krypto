@@ -8,6 +8,5 @@ node_modules
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
 
-eb
+dev
 package-lock.json
-/public
