@@ -38,7 +38,7 @@ export default function Filters(props) {
     }
     return (
         <>
-            <div className={styles.filters}>
+            <div className={styles.filters + " slide-in"}>
                 <h1>Filters</h1>
                 <ul>
                     {filters.map(function (element, i) {

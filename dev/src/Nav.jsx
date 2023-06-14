@@ -67,8 +67,8 @@ export default function Nav(props) {
               <li><a className={styles.button_white + ' ' + styles.button_ico + ' ' + styles.iconsax_key} onClick={() => setLogin(true)}>Login</a></li>
               <li className={styles.navigation_items_locales}>
                 <ul>
-              <li onClick={() => changeLocale("en")}>En</li>
-              <li onClick={() => changeLocale("fr")}>Fr</li>
+                {locale.includes("fr") && <li onClick={() => changeLocale("en")}>En</li>}
+              {locale.includes("en") && <li onClick={() => changeLocale("fr")}>Fr</li>}
                 </ul>
               </li>
             </ul>
@@ -101,8 +101,8 @@ export default function Nav(props) {
                 );
               })}
               <li><a onClick={() => setLogin(true)}>Login</a></li>
-              <li onClick={() => changeLocale("en")}>En</li>
-              <li onClick={() => changeLocale("fr")}>Fr</li>
+              {locale.includes("fr") && <li onClick={() => {changeLocale("en"); navBurgerClick()}}>En</li>}
+              {locale.includes("en") && <li onClick={() => {changeLocale("fr"); navBurgerClick()}}>Fr</li>}
             </ul>
           </nav>
         </div>

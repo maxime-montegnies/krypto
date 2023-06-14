@@ -42,13 +42,13 @@ input {
 .iconsax_key {
   background-image: url("/images/Iconsax/key.svg") !important;
 }
-.button_ico{
-  padding-left: 30px!important;
+.button_ico {
+  padding-left: 30px !important;
   background-repeat: no-repeat;
   background-position: 6px 50%;
 }
-.button_white{
-  color: var(--color_KRYPTO-SEC)!important;
+.button_white {
+  color: var(--color_KRYPTO-SEC) !important;
   background-color: white;
   padding: 6px 10px;
   border-radius: 11px;
@@ -58,7 +58,7 @@ input {
   transition: background-color 0.25s, color 0.25s;
   &:hover {
     background-color: var(--color_BUTTON);
-    color: black;      
+    color: black;
   }
 }
 
@@ -183,11 +183,17 @@ input {
 .navigation_items_locales {
   // background-color: red;
   margin-left: 10px;
-  li{
-    cursor: pointer;
-  &:hover{
-    opacity: 0.5;
+  width: 20px;
+  ul {
+    // height: 100%;
   }
+  li {
+    // height: 100%;
+    line-height: 32px;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.5;
+    }
   }
 }
 .navigation_items {
@@ -196,7 +202,6 @@ input {
   margin-top: 27px;
   display: flex;
   justify-content: flex-end;
-
 
   @media only screen and (max-width: $width_breakpoint3) {
     justify-content: flex-start;
@@ -1012,7 +1017,7 @@ input {
             margin-bottom: 20px;
           }
           & > h1 {
-            &:after{
+            &:after {
               transform: scaleY(-1);
             }
           }
@@ -1023,14 +1028,14 @@ input {
           line-height: 34px;
           position: relative;
           padding-right: 30px;
-          &:after{
-            content: '';
+          &:after {
+            content: "";
             width: 24px;
             height: 24px;
             right: 0;
             top: 0;
             position: absolute;
-            background-image: url('/images/Iconsax/arrowdown2.svg');
+            background-image: url("/images/Iconsax/arrowdown2.svg");
             background-repeat: no-repeat;
             background-position: 100% 0px;
           }
@@ -1225,8 +1230,8 @@ input {
             flex: 0 0 270px;
             width: 270px;
           }
-          &:before{
-            content: '';
+          &:before {
+            content: "";
             position: absolute;
             width: 30px;
             height: 30px;
@@ -1236,7 +1241,7 @@ input {
             // background-color: red;
             background-repeat: no-repeat;
             background-position: 100% 0;
-            background-image: url('/images/Iconsax/quotedown.svg');
+            background-image: url("/images/Iconsax/quotedown.svg");
           }
 
           & > div {
@@ -1440,25 +1445,13 @@ input {
   }
 }
 
-
-
-
-
-
-
-.filters{
-  ul{
+.filters {
+  ul {
     display: flex;
     gap: 40px;
     margin-bottom: 10px;
   }
 }
-
-
-
-
-
-
 
 .tmp1 {
   display: flex;
@@ -1487,4 +1480,3 @@ input {
     margin-left: -64px;
   }
 }
-
