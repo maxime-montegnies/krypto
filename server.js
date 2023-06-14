@@ -7,13 +7,13 @@ var app = express();
 
 const _public_folder = "public";
 const _root_dirname = __dirname + "/" + _public_folder;
-app.use(express.static(_public_folder));
 
 //make way for some custom css, js and images
 app.use(function(req, res, next) {
-    setAccessOrigin(res);
-    next();
-  });
+  setAccessOrigin(res);
+  next();
+});
+app.use(express.static(_public_folder));
 // 
 app.use("/pools", express.static(_root_dirname + "/"));
 app.use("/marketplace", express.static(_root_dirname + "/"));
@@ -70,10 +70,22 @@ app.get("/data/pools", (req, res) => {
         res.send(err);
         return;
       }
-      const json = JSON.parse(data);
-      const returnArray = [];
       res.setHeader("Content-Type", "application/json");
+      const json = JSON.parse(data);
+      const tmpArray = [];
+      const returnArray = [];
       json.pools.forEach((element, i) => {
+        tmpArray.push(element);
+      });
+      if(req.query.investmentValue && req.query.investmentValue!='') { 
+        if(req.query.investmentValue=="1") {
+          tmpArray.sort((a,b)=>a.investmentValue-b.investmentValue);
+        }
+        if(req.query.investmentValue=="-1") {
+          tmpArray.sort((a,b)=>b.investmentValue-a.investmentValue);
+        }
+      }
+      tmpArray.forEach((element, i) => {
         if (i < count) {
           returnArray.push(element);
         }
@@ -100,7 +112,8 @@ app.get("/data/pools", (req, res) => {
 //   });
 // app.use("/*", express.static(_root_dirname + "/"));  
 // app.get("/*", (req, res) => { res.redirect(_root_dirname + "/index.htm");});  
-  const PORT = process.env.PORT || 8080;
+
+  const PORT = process.env.PORT || process.env.npm_config_port || 8080;
 var server = app.listen(PORT, function () {
   //   console.log(process.env.PORT);
   var port = server.address().port;

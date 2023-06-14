@@ -4,7 +4,7 @@
   "type": "commonjs",
   "scripts": {
     "start": "npm run server",
-    "dev": "npm run server --port=8080",
+    "dev": "npm run server --port=8082",
     "server": "node server.js",
     "deploy": "eb deploy --message=\"test\""
   },

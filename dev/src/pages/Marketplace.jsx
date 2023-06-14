@@ -1,44 +1,93 @@
-import { useParams } from "react-router-dom";
-import PoolCard from "../components/Pool/PoolCard";
-import useFetch from "react-fetch-hook";
 import styles from "../style/style.module.scss";
 import { useTranslation } from "react-i18next";
 import { SectionTitle } from "../components/SectionTemplates";
 import useFetchData from "../utils/useFetchData";
 import Filters from "../components/Filters";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Marketplace(props) {
+  console.log('RENDER Marketplace');
   const { t } = useTranslation();
+  const [filtersData, setFiltersData] = useState([
+    {
+      name: "gender",
+      label: "Gender",
+      value: "",
+      values: [
+        {
+          "label": "All",
+          "value": ""
+        },
+        {
+          "label": "Male",
+          "value": "male"
+        }
+        ,
+        {
+          "label": "Female",
+          "value": "female"
+        }
+      ]
+    }
+    ,
+    {
+      name: "results",
+      label: "Results",
+      value: "10",
+      values: [
+        {
+          "label": "5",
+          "value": "5"
+        },
+        {
+          "label": "10",
+          "value": "10"
+        },
+        {
+          "label": "20",
+          "value": "20"
+        }
+        ,
+        {
+          "label": "50",
+          "value": "50"
+        }
+        ,
+        {
+          "label": "100",
+          "value": "100"
+        }
+        ,
+        {
+          "label": "150",
+          "value": "150"
+        }
+        ,
+        {
+          "label": "200",
+          "value": "200"
+        }
+      ]
+    }
+  ]);
+
   const addParams = (obj) => {
     let params = ""
-    for (const key in filters) {
-      params += `&${key}=${filters[key]}`
-    }
-    params = params.replace(params[0], '?');
-    return params;
+    obj.forEach(element => {
+      params += `&${element.name}=${element.value}`
+    });
+    return params.replace(params[0], '?');
   }
-  const [filters, setFilters] = useState({ 'results': '10' });
-  const [dataUrl, setDataUrl] = useState("https://randomuser.me/api/" + addParams(filters));
-  const filterChanged = (e) => {
-    const _filters = filters;
-    for (const key in _filters) {
-      _filters[e.name] = e.value;
-    }
-    setFilters(_filters);
-    const params = addParams(filters)
-
-    console.warn("https://randomuser.me/api/" + params)
-    setDataUrl("https://randomuser.me/api/" + params)
-  }
-  const data = useFetchData(dataUrl, []);
+  const data = useFetchData("https://randomuser.me/api/" + addParams(filtersData), [filtersData]);
 
 
 
   const LoadItems = () => {
+    // return <></>;
     let menuItems = [];
-    for (var i = 0; i < parseInt(filters.results); i++) {
-      menuItems.push(<li className={styles.tmp2} style={{ opacity: 0.2 }}>
+    // for (var i = 0; i < parseInt(filtersData. . . . ..results); i++) {
+    for (var i = 0; i < parseInt(10); i++) {
+      menuItems.push(<li key={i} className={styles.tmp2} style={{ opacity: 0.2 }}>
         <span />
       </li>);
     }
@@ -51,7 +100,7 @@ export default function Marketplace(props) {
         subtitle={t("marketplace.subtitle")}
         text={t("marketplace.text")}
       />
-      <Filters filterChanged={filterChanged} />
+      <Filters setFilter={setFiltersData} filters={filtersData} />
       <div>
         {data.isLoading ? (
           <>

@@ -1030,7 +1030,7 @@ input {
             right: 0;
             top: 0;
             position: absolute;
-            background-image: url('images/Iconsax/arrowdown2.svg');
+            background-image: url('/images/Iconsax/arrowdown2.svg');
             background-repeat: no-repeat;
             background-position: 100% 0px;
           }
@@ -1440,6 +1440,26 @@ input {
   }
 }
 
+
+
+
+
+
+
+.filters{
+  ul{
+    display: flex;
+    gap: 40px;
+    margin-bottom: 10px;
+  }
+}
+
+
+
+
+
+
+
 .tmp1 {
   display: flex;
   flex-wrap: wrap;
@@ -1467,3 +1487,4 @@ input {
     margin-left: -64px;
   }
 }
+

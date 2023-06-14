@@ -5,7 +5,8 @@
   "type0": "module",
   "type": "commonjs",
   "scripts": {
-    "dev": "npm run server & npm run vite",
+    "dev0": "npm run server & npm run vite",
+    "dev": "npm run vite",
     "vite": "vite",
     "build": "vite build",
     "start": "npm run server --yolo=swag",

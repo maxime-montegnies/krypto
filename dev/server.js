@@ -40,6 +40,7 @@ app.get("/data/pool/:id", (req, res) => {
     let find = false;
     json.pools.forEach((element) => {
     //   console.log(element.id + " " + req.query.id + " " + req.params.id);
+    //   console.log(element.id + " " + req.query.id + " " + req.params.investmentValue);
       if (element.id == req.params.id) {
         res.send(JSON.stringify(element, null, 2));
         find = true;
@@ -69,6 +70,14 @@ app.get("/data/pools", (req, res) => {
           returnArray.push(element);
         }
       });
+      if(req.params.investmentValue && req.params.investmentValue!='') {
+        if(req.params.investmentValue=="1") {
+          returnArray.sort((a,b)=>a.investmentValue-b.investmentValue);
+        }
+        if(req.params.investmentValue=="-1") {
+          returnArray.sort((a,b)=>b.investmentValue-a.investmentValue);
+        }
+      }
       res.send(JSON.stringify(returnArray, null, 2));
     });
   });

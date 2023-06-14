@@ -5,9 +5,11 @@ import { useTranslation } from "react-i18next";
 import LocaleContext from "../LocaleContext";
 import { useContext, useEffect, useState } from "react";
 import useFetchData from "../utils/useFetchData";
+// import useFetch from "react-fetch-hook";
 
 
 export default function Faq(props) {
+  console.log('RENDER FAQ')
   const { locale } = useContext(LocaleContext);
   const [locale2, setLocal2] = useState(locale);
   useEffect(()=>{
@@ -16,6 +18,7 @@ export default function Faq(props) {
   // const locale  = _locale && _locale.includes("-") ? _locale.slice(0, _locale.indexOf("-")) : _locale;
 //   const faqs = useFetchData("/data/faq/?lang="+locale, [locale]);
   const faqs = useFetchData("/data/faq.json", []);
+  // const faqs = useFetch("http://localhost:8082/data/faq.json");
 //   alert(locale)
   const reveal = (e) => {
     e.target.parentNode.classList.toggle(styles.open);

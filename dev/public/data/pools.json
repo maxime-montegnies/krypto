@@ -39,7 +39,7 @@
             "img": "/images/pools/discover__pool_2.jfif",
             "invested": false,
             "title": "KS2Vest",
-            "investmentValue": 45680800,
+            "investmentValue": 45680000,
             "expertValue": 67515800,
             "location": {
                 "city":"Metz",
@@ -70,7 +70,7 @@
             "img": "/images/pools/discover__pool_3.jfif",
             "invested": false,
             "title": "KS2Vest",
-            "investmentValue": 45680800,
+            "investmentValue": 35680800,
             "expertValue": 67515800,
             "location": {
                 "city":"Metz",
@@ -132,7 +132,7 @@
             "img": "/images/pools/discover__pool_5.jfif",
             "invested": false,
             "title": "KS2Vest",
-            "investmentValue": 13250700,
+            "investmentValue": 13250200,
             "expertValue": 21033100,
             "location": {
                 "city":"Paris",
@@ -163,7 +163,7 @@
             "img": "/images/pools/discover__pool_6.jfif",
             "invested": false,
             "title": "KS2Vest",
-            "investmentValue": 13250700,
+            "investmentValue": 13250750,
             "expertValue": 21033100,
             "location": {
                 "city":"Paris",
@@ -194,7 +194,7 @@
             "img": "/images/pools/discover__pool_7.jfif",
             "invested": false,
             "title": "KS2Vest",
-            "investmentValue": 13250700,
+            "investmentValue": 13250980,
             "expertValue": 21033100,
             "location": {
                 "city":"Paris",
@@ -225,7 +225,7 @@
             "img": "/images/pools/discover__pool_8.jfif",
             "invested": false,
             "title": "KS2Vest",
-            "investmentValue": 13250700,
+            "investmentValue": 13251700,
             "expertValue": 21033100,
             "location": {
                 "city":"Paris",
@@ -256,7 +256,7 @@
             "img": "/images/pools/discover__pool_9.jfif",
             "invested": false,
             "title": "KS2Vest",
-            "investmentValue": 13250700,
+            "investmentValue": 14250700,
             "expertValue": 21033100,
             "location": {
                 "city":"Paris",
@@ -287,7 +287,7 @@
             "img": "/images/pools/discover__pool_10.jfif",
             "invested": false,
             "title": "KS2Vest",
-            "investmentValue": 13250700,
+            "investmentValue": 10050700,
             "expertValue": 21033100,
             "location": {
                 "city":"Paris",
