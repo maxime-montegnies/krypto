@@ -5,7 +5,7 @@ var express = require("express");
 console.log(process.env.npm_config_yolo)
 var app = express();
 
-const _public_folder = "dist";
+const _public_folder = "public";
 const _root_dirname = __dirname + "/" + _public_folder;
 
 //make way for some custom css, js and images
@@ -90,7 +90,8 @@ app.get("/data/pools", (req, res) => {
 //     });
 //   });
   
-  const PORT = process.env.PORT || 8080;
+  const PORT = process.env.PORT || 8081;
+  console.log('PORT '+ PORT)
 var server = app.listen(PORT, function () {
   //   console.log(process.env.PORT);
   var port = server.address().port;

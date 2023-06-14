@@ -1,11 +1,12 @@
 {
-  "name": "threejs-journey-exercise",
+  "name": "kryptostone-dev",
   "private": true,
   "version": "0.0.0",
   "type0": "module",
   "type": "commonjs",
   "scripts": {
-    "dev": "vite",
+    "dev": "npm run server & npm run vite",
+    "vite": "vite",
     "build": "vite build",
     "start": "npm run server --yolo=swag",
     "server": "node server.js",

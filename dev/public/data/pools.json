@@ -8,7 +8,11 @@
             "title": "KS2Vest",
             "investmentValue": 45680800,
             "expertValue": 67515800,
-            "location": "Metz, France",
+            "location": {
+                "city":"Metz",
+                "country":"France"
+            }
+            ,
             "creationDate": "10 juin 2023",
             "numberOfNFTs":37153996,
             "movementOver12Months": "12.84%",
@@ -37,7 +41,10 @@
             "title": "KS2Vest",
             "investmentValue": 45680800,
             "expertValue": 67515800,
-            "location": "Metz, France",
+            "location": {
+                "city":"Metz",
+                "country":"France"
+            },
             "creationDate": "10 juin 2023",
             "numberOfNFTs":37153996,
             "movementOver12Months": "12.84%",
@@ -65,7 +72,10 @@
             "title": "KS2Vest",
             "investmentValue": 45680800,
             "expertValue": 67515800,
-            "location": "Metz, France",
+            "location": {
+                "city":"Metz",
+                "country":"France"
+            },
             "creationDate": "10 juin 2023",
             "numberOfNFTs":37153996,
             "movementOver12Months": "12.84%",
@@ -93,7 +103,10 @@
             "title": "KS2Vest",
             "investmentValue": 13250700,
             "expertValue": 21033100,
-            "location": "?????",
+            "location": {
+                "city":"Paris",
+                "country":"France"
+            },
             "creationDate": "10 juin 2023",
             "numberOfNFTs":37153996,
             "movementOver12Months": "12.84%",
@@ -121,7 +134,10 @@
             "title": "KS2Vest",
             "investmentValue": 13250700,
             "expertValue": 21033100,
-            "location": "?????",
+            "location": {
+                "city":"Paris",
+                "country":"France"
+            },
             "creationDate": "10 juin 2023",
             "numberOfNFTs":37153996,
             "movementOver12Months": "12.84%",
@@ -149,7 +165,10 @@
             "title": "KS2Vest",
             "investmentValue": 13250700,
             "expertValue": 21033100,
-            "location": "?????",
+            "location": {
+                "city":"Paris",
+                "country":"France"
+            },
             "creationDate": "10 juin 2023",
             "numberOfNFTs":37153996,
             "movementOver12Months": "12.84%",
@@ -177,7 +196,10 @@
             "title": "KS2Vest",
             "investmentValue": 13250700,
             "expertValue": 21033100,
-            "location": "?????",
+            "location": {
+                "city":"Paris",
+                "country":"France"
+            },
             "creationDate": "10 juin 2023",
             "numberOfNFTs":37153996,
             "movementOver12Months": "12.84%",
@@ -205,7 +227,10 @@
             "title": "KS2Vest",
             "investmentValue": 13250700,
             "expertValue": 21033100,
-            "location": "?????",
+            "location": {
+                "city":"Paris",
+                "country":"France"
+            },
             "creationDate": "10 juin 2023",
             "numberOfNFTs":37153996,
             "movementOver12Months": "12.84%",
@@ -233,7 +258,10 @@
             "title": "KS2Vest",
             "investmentValue": 13250700,
             "expertValue": 21033100,
-            "location": "?????",
+            "location": {
+                "city":"Paris",
+                "country":"France"
+            },
             "creationDate": "10 juin 2023",
             "numberOfNFTs":37153996,
             "movementOver12Months": "12.84%",
@@ -261,7 +289,10 @@
             "title": "KS2Vest",
             "investmentValue": 13250700,
             "expertValue": 21033100,
-            "location": "?????",
+            "location": {
+                "city":"Paris",
+                "country":"France"
+            },
             "creationDate": "10 juin 2023",
             "numberOfNFTs":37153996,
             "movementOver12Months": "12.84%",

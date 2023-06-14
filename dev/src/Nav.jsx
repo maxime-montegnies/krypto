@@ -64,9 +64,13 @@ export default function Nav(props) {
                   </li>
                 );
               })}
+              <li><a className={styles.button_white + ' ' + styles.button_ico + ' ' + styles.iconsax_key} onClick={() => setLogin(true)}>Login</a></li>
+              <li className={styles.navigation_items_locales}>
+                <ul>
               <li onClick={() => changeLocale("en")}>En</li>
               <li onClick={() => changeLocale("fr")}>Fr</li>
-              <li onClick={() => setLogin(true)}>Login</li>
+                </ul>
+              </li>
             </ul>
           </nav>
         </div>
@@ -96,9 +100,9 @@ export default function Nav(props) {
                   </li>
                 );
               })}
+              <li><a onClick={() => setLogin(true)}>Login</a></li>
               <li onClick={() => changeLocale("en")}>En</li>
               <li onClick={() => changeLocale("fr")}>Fr</li>
-              <li onClick={() => setLogin(true)}>Login</li>
             </ul>
           </nav>
         </div>

@@ -9,7 +9,6 @@ h1 {
     color: var(--color_SMALL-TEXT);
   }
 }
-
 input {
   background: #04251d;
   border-radius: 10px;
@@ -40,6 +39,28 @@ input {
 .iconsax_profile2user {
   background-image: url("/images/Iconsax/profile2user.svg") !important;
 }
+.iconsax_key {
+  background-image: url("/images/Iconsax/key.svg") !important;
+}
+.button_ico{
+  padding-left: 30px!important;
+  background-repeat: no-repeat;
+  background-position: 6px 50%;
+}
+.button_white{
+  color: var(--color_KRYPTO-SEC)!important;
+  background-color: white;
+  padding: 6px 10px;
+  border-radius: 11px;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.25s, color 0.25s;
+  &:hover {
+    background-color: var(--color_BUTTON);
+    color: black;      
+  }
+}
 
 .button_green {
   background-color: var(--color_BUTTON);
@@ -50,9 +71,7 @@ input {
   color: black;
   display: inline-block;
   transition: background-color 0.25s, color 0.25s;
-
   &:hover {
-    // color: var(--color_BUTTON);
     color: var(--color_KRYPTO-SEC);
     background-color: white;
   }
@@ -161,6 +180,16 @@ input {
   }
 }
 
+.navigation_items_locales {
+  // background-color: red;
+  margin-left: 10px;
+  li{
+    cursor: pointer;
+  &:hover{
+    opacity: 0.5;
+  }
+  }
+}
 .navigation_items {
   // flex-grow: 1;
   text-align: center;
@@ -196,7 +225,7 @@ input {
       padding: 0 10px;
       display: block;
       height: 32px;
-      line-height: 32px;
+      line-height: 28px;
 
       &.active {
         border-color: #ffff;
@@ -970,23 +999,55 @@ input {
         background: var(--color_BACKGROUND-LIGHT-2);
         border-radius: 30px;
         padding: 24px 30px;
+        padding-bottom: 0px;
+        overflow: hidden;
+        transition: opacity 0.5s, height 0.5s;
 
         &.open {
           & > p {
-            display: block;
+            // display: block;
+            // margin-top: 20px;
+            opacity: 1;
+            height: fit-content;
+            margin-bottom: 20px;
+          }
+          & > h1 {
+            &:after{
+              transform: scaleY(-1);
+            }
           }
         }
 
         & > h1 {
           font-size: 24px;
           line-height: 34px;
+          position: relative;
+          padding-right: 30px;
+          &:after{
+            content: '';
+            width: 24px;
+            height: 24px;
+            right: 0;
+            top: 0;
+            position: absolute;
+            background-image: url('images/Iconsax/arrowdown2.svg');
+            background-repeat: no-repeat;
+            background-position: 100% 0px;
+          }
+          margin-bottom: 20px;
+          cursor: pointer;
         }
 
         & > p {
           font-size: 18px;
           line-height: 25px;
-          margin-top: 20px;
-          display: none;
+          // margin-top: 0px;
+          // margin-top: 20px;
+          height: 0px;
+          margin-bottom: 0px;
+          transition: opacity 0.5s, height 0.5s;
+          opacity: 0;
+          // display: none;
         }
       }
     }
@@ -1157,11 +1218,25 @@ input {
           gap: 190px;
         }
         & > li {
+          position: relative;
           flex: 0 0 420px;
           width: 420px;
           @media only screen and (max-width: $width_breakpoint1) {
             flex: 0 0 270px;
             width: 270px;
+          }
+          &:before{
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            z-index: 2;
+            right: 30px;
+            top: 30px;
+            // background-color: red;
+            background-repeat: no-repeat;
+            background-position: 100% 0;
+            background-image: url('/images/Iconsax/quotedown.svg');
           }
 
           & > div {
@@ -1379,5 +1454,16 @@ input {
   }
   @media only screen and (max-width: $width_breakpoint3) {
     width: 50%;
+  }
+  span {
+    margin-top: 20px;
+    position: relative;
+    display: block;
+    background-color: var(--color_KRYPTO-SEC);
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    left: 50%;
+    margin-left: -64px;
   }
 }
