@@ -53,6 +53,17 @@ app.get("/data/pool/:id", (req, res) => {
     }
   });
 });
+
+const orderResult = (req, returnArray, key)=> {
+  if(req.params[key] && req.params[key]!='') {
+    if(req.params[key]=="1") {
+      returnArray.sort((a,b)=>a[key]-b[key]);
+    }
+    if(req.params[key]=="-1") {
+      returnArray.sort((a,b)=>b[key]-a[key]);
+    }
+  }
+}
 app.get("/data/pools", (req, res) => {
     // setAccessOrigin(res);
     let count = 10;
@@ -70,14 +81,16 @@ app.get("/data/pools", (req, res) => {
           returnArray.push(element);
         }
       });
-      if(req.params.investmentValue && req.params.investmentValue!='') {
-        if(req.params.investmentValue=="1") {
-          returnArray.sort((a,b)=>a.investmentValue-b.investmentValue);
-        }
-        if(req.params.investmentValue=="-1") {
-          returnArray.sort((a,b)=>b.investmentValue-a.investmentValue);
-        }
-      }
+      orderResult(req, returnArray, "investmentValue");
+      orderResult(req, returnArray, "expertValue");
+      orderResult(req, returnArray, "numberOfNFTs");
+      orderResult(req, returnArray, "initialShareValue");
+      orderResult(req, returnArray, "currentShareValue");
+      orderResult(req, returnArray, "expectedReturnPerYear");
+      orderResult(req, returnArray, "amountOfCurrentRents");
+      orderResult(req, returnArray, "amountOfPotentialRents");
+      orderResult(req, returnArray, "treasury");
+      orderResult(req, returnArray, "potentialReturnPerYear");
       res.send(JSON.stringify(returnArray, null, 2));
     });
   });

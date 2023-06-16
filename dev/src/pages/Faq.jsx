@@ -30,7 +30,7 @@ export default function Faq(props) {
     <>
         <SectionTitle title={t("faq.title")} subtitle={t("faq.subtitle")} text={t("faq.text")} />
         <div className={styles.faq_content + " slide-in"}>
-          <ul style={{opacity:(faqs.isLoading?0.2:1)}}>
+          <ul style={{opacity:(faqs.isLoading?0.:1)}}>
             {faqs.isLoading ? (
               <>
                 <li>

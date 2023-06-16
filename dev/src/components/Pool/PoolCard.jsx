@@ -17,8 +17,7 @@ const PoolCardContent = (props) => {
         {t("pool.expertise")} : <b>{formatEuro(element.expertValue, t("misc.decimalSeparator"), t("misc.thousandSeparator"))}</b>
       </p>
       <div className={styles.diversification}>
-        <p>{element.location.city}</p>
-        <p>{element.location.country}</p>
+        <p>{element.location.city}, {element.location.country}</p>
         <p>{element.diversification.location}</p>
         <p>
           {element.diversification.detail.map(function (element, i) {

@@ -1,6 +1,8 @@
-import styles from "../style/style.module.scss";
+import styles from "../../style/style.module.scss";
+import { useTranslation } from "react-i18next";
+import { useState } from "react";
 
-function Filter(props) {
+function FilterUnit(props) {
     const data = props.data;
     const filterChanged = (e) => {
         const retObj = {};
@@ -11,7 +13,8 @@ function Filter(props) {
     }
     return (
         <li >
-            <span>{data.label} : </span>
+            <label>
+            <span>{data.label}</span>
             <select onChange={filterChanged} name={data.name} defaultValue={data.value}>
                 {data.values.map(function (data_v, i_v) {
                     // const selected = data.value==data_v.value ? "selected" : '';
@@ -20,30 +23,40 @@ function Filter(props) {
                     )
                 })}
             </select>
+            </label>
         </li>
     )
 }
-export default function Filters(props) {
+export default function Filter(props) {
+    const [label, setLabel] = useState("");
+    const {t} = useTranslation();
     const filters = props.filters;
-    const setFilters = props.setFilter;
+    const setFilter = props.setFilter;
     const filterChanged = (e) => {
         const _filters = JSON.parse(JSON.stringify(filters));
-        for (const key in _filters) {
-            const element = _filters[key];
+        let params = [];
+        for (const key in _filters.filterBy) {
+            const element = _filters.filterBy[key];
             if (element.name == e.name) {
                 element.value = e.value;
             }
+            if(element.value!==""&& element.showInUi==true) params.push(element.value);
         }
-        props.setFilter((prevVal) => { console.warn("SETfilters"); return _filters });
+        if(params.length!=0){
+            setLabel(`(${params.join(',')})`);
+        } else {
+            setLabel(``);
+        }
+        setFilter((prevVal) => { console.warn("SETfilters"); return _filters });
     }
     return (
         <>
-            <div className={styles.filters + " slide-in"}>
-                <h1>Filters</h1>
+            <div className={styles.filter}>
+            <h1>{t("misc.filters")} <small>{label}</small></h1>
                 <ul>
-                    {filters.map(function (element, i) {
+                    {filters.filterBy.map(function (element, i) {
                         return (
-                            <Filter {...props} filterChanged={filterChanged} data={element} key={i} />
+                            <FilterUnit {...props} filterChanged={filterChanged} data={element} key={i} />
                         );
                     })}
                 </ul>

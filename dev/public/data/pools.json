@@ -7,14 +7,14 @@
             "invested": true,
             "title": "KS2Vest",
             "investmentValue": 45680800,
-            "expertValue": 67515800,
+            "expertValue": 97515800,
             "location": {
                 "city":"Metz",
                 "country":"France"
             }
             ,
             "creationDate": "10 juin 2023",
-            "numberOfNFTs":37153996,
+            "numberOfNFTs":7153996,
             "movementOver12Months": "12.84%",
             "diversification": {
                 "location": "Diversification en France",
@@ -30,8 +30,21 @@
             "amountOfCurrentRents": 4385616,
             "amountOfPotentialRents": 4752917,
             "treasury": 3986223,
-            "potentialReturnPerYear": 0.1040
-            
+            "returnPerYear": 0.1040,
+            "sites":[
+                {
+                    "title":"Blockchain Building",
+                    "investCost":1900000,
+                    "aera":2340,
+                    "img": "/images/pools/discover__pool_1.jfif"
+                },
+                {
+                    "title":"Blockchain Building",
+                    "investCost":1200000,
+                    "aera":1340,
+                    "img": "/images/pools/site_1.jpg"
+                }
+            ]
         },
         {
             "id": "002",
@@ -40,13 +53,13 @@
             "invested": false,
             "title": "KS2Vest",
             "investmentValue": 45680000,
-            "expertValue": 67515800,
+            "expertValue": 62515800,
             "location": {
                 "city":"Metz",
                 "country":"France"
             },
             "creationDate": "10 juin 2023",
-            "numberOfNFTs":37153996,
+            "numberOfNFTs":17153996,
             "movementOver12Months": "12.84%",
             "diversification": {
                 "location": "Diversification en Europe",
@@ -56,13 +69,27 @@
                     "176 lots"
                 ]
             },
-            "initialShareValue": 1,
+            "initialShareValue": 0.5,
             "currentShareValue": 1.82,
             "expectedReturnPerYear": 0.1040,
             "amountOfCurrentRents": 4385616,
             "amountOfPotentialRents": 4752917,
             "treasury": 3986223,
-            "potentialReturnPerYear": 0.1040
+            "returnPerYear": 0.1040,
+            "sites":[
+                {
+                    "title":"Blockchain Building",
+                    "investCost":1900000,
+                    "aera":2340,
+                    "img": "/images/pools/discover__pool_1.jfif"
+                },
+                {
+                    "title":"Blockchain Building",
+                    "investCost":1200000,
+                    "aera":1340,
+                    "img": "/images/pools/site_1.jpg"
+                }
+            ]
         },
         {
             "id": "003",
@@ -71,13 +98,13 @@
             "invested": false,
             "title": "KS2Vest",
             "investmentValue": 35680800,
-            "expertValue": 67515800,
+            "expertValue": 47515800,
             "location": {
                 "city":"Metz",
                 "country":"France"
             },
             "creationDate": "10 juin 2023",
-            "numberOfNFTs":37153996,
+            "numberOfNFTs":153996,
             "movementOver12Months": "12.84%",
             "diversification": {
                 "location": "Diversification en France-Roumanie",
@@ -87,13 +114,27 @@
                     "176 lots"
                 ]
             },
-            "initialShareValue": 1,
+            "initialShareValue": 0.8,
             "currentShareValue": 1.82,
             "expectedReturnPerYear": 0.1040,
             "amountOfCurrentRents": 4385616,
             "amountOfPotentialRents": 4752917,
             "treasury": 3986223,
-            "potentialReturnPerYear": 0.1040
+            "returnPerYear": 0.1040,
+            "sites":[
+                {
+                    "title":"Blockchain Building",
+                    "investCost":1900000,
+                    "aera":2340,
+                    "img": "/images/pools/discover__pool_1.jfif"
+                },
+                {
+                    "title":"Blockchain Building",
+                    "investCost":1200000,
+                    "aera":1340,
+                    "img": "/images/pools/site_1.jpg"
+                }
+            ]
         },
         {
             "id": "004",
@@ -108,7 +149,7 @@
                 "country":"France"
             },
             "creationDate": "10 juin 2023",
-            "numberOfNFTs":37153996,
+            "numberOfNFTs":1653996,
             "movementOver12Months": "12.84%",
             "diversification": {
                 "location": "Diversification Hotelerie",
@@ -118,13 +159,27 @@
                     "15 lots"
                 ]
             },
-            "initialShareValue": 1,
+            "initialShareValue": 1.9,
             "currentShareValue": 1.82,
             "expectedReturnPerYear": "7.36% (par an)",
             "amountOfCurrentRents": 4385616,
             "amountOfPotentialRents": 4752917,
             "treasury": 3986223,
-            "potentialReturnPerYear": 0.1040
+            "returnPerYear": 0.1040,
+            "sites":[
+                {
+                    "title":"Blockchain Building",
+                    "investCost":1900000,
+                    "aera":2340,
+                    "img": "/images/pools/discover__pool_1.jfif"
+                },
+                {
+                    "title":"Blockchain Building",
+                    "investCost":1200000,
+                    "aera":1340,
+                    "img": "/images/pools/site_1.jpg"
+                }
+            ]
         },
         {
             "id": "005",
@@ -139,7 +194,7 @@
                 "country":"France"
             },
             "creationDate": "10 juin 2023",
-            "numberOfNFTs":37153996,
+            "numberOfNFTs":13153996,
             "movementOver12Months": "12.84%",
             "diversification": {
                 "location": "Diversification Hotelerie",
@@ -149,13 +204,27 @@
                     "15 lots"
                 ]
             },
-            "initialShareValue": 1,
+            "initialShareValue": 1.4,
             "currentShareValue": 1.82,
             "expectedReturnPerYear": "7.36% (par an)",
             "amountOfCurrentRents": 4385616,
             "amountOfPotentialRents": 4752917,
             "treasury": 3986223,
-            "potentialReturnPerYear": 0.1040
+            "returnPerYear": 0.1040,
+            "sites":[
+                {
+                    "title":"Blockchain Building",
+                    "investCost":1900000,
+                    "aera":2340,
+                    "img": "/images/pools/discover__pool_1.jfif"
+                },
+                {
+                    "title":"Blockchain Building",
+                    "investCost":1200000,
+                    "aera":1340,
+                    "img": "/images/pools/site_1.jpg"
+                }
+            ]
         },
         {
             "id": "006",
@@ -164,13 +233,13 @@
             "invested": false,
             "title": "KS2Vest",
             "investmentValue": 13250750,
-            "expertValue": 21033100,
+            "expertValue": 11033100,
             "location": {
                 "city":"Paris",
                 "country":"France"
             },
             "creationDate": "10 juin 2023",
-            "numberOfNFTs":37153996,
+            "numberOfNFTs":3996,
             "movementOver12Months": "12.84%",
             "diversification": {
                 "location": "Diversification Hotelerie",
@@ -180,13 +249,27 @@
                     "15 lots"
                 ]
             },
-            "initialShareValue": 1,
+            "initialShareValue": 0.87,
             "currentShareValue": 1.82,
             "expectedReturnPerYear": "7.36% (par an)",
             "amountOfCurrentRents": 4385616,
             "amountOfPotentialRents": 4752917,
             "treasury": 3986223,
-            "potentialReturnPerYear": 0.1040
+            "returnPerYear": 0.1040,
+            "sites":[
+                {
+                    "title":"Blockchain Building",
+                    "investCost":1900000,
+                    "aera":2340,
+                    "img": "/images/pools/discover__pool_1.jfif"
+                },
+                {
+                    "title":"Blockchain Building",
+                    "investCost":1200000,
+                    "aera":1340,
+                    "img": "/images/pools/site_1.jpg"
+                }
+            ]
         },
         {
             "id": "007",
@@ -201,7 +284,7 @@
                 "country":"France"
             },
             "creationDate": "10 juin 2023",
-            "numberOfNFTs":37153996,
+            "numberOfNFTs":996,
             "movementOver12Months": "12.84%",
             "diversification": {
                 "location": "Diversification Hotelerie",
@@ -211,13 +294,27 @@
                     "15 lots"
                 ]
             },
-            "initialShareValue": 1,
+            "initialShareValue": 1.05,
             "currentShareValue": 1.82,
             "expectedReturnPerYear": "7.36% (par an)",
             "amountOfCurrentRents": 4385616,
             "amountOfPotentialRents": 4752917,
             "treasury": 3986223,
-            "potentialReturnPerYear": 0.1040
+            "returnPerYear": 0.1040,
+            "sites":[
+                {
+                    "title":"Blockchain Building",
+                    "investCost":1900000,
+                    "aera":2340,
+                    "img": "/images/pools/discover__pool_1.jfif"
+                },
+                {
+                    "title":"Blockchain Building",
+                    "investCost":1200000,
+                    "aera":1340,
+                    "img": "/images/pools/site_1.jpg"
+                }
+            ]
         },
         {
             "id": "008",
@@ -226,13 +323,13 @@
             "invested": false,
             "title": "KS2Vest",
             "investmentValue": 13251700,
-            "expertValue": 21033100,
+            "expertValue": 21033300,
             "location": {
                 "city":"Paris",
                 "country":"France"
             },
             "creationDate": "10 juin 2023",
-            "numberOfNFTs":37153996,
+            "numberOfNFTs":37996,
             "movementOver12Months": "12.84%",
             "diversification": {
                 "location": "Diversification Hotelerie",
@@ -242,13 +339,27 @@
                     "15 lots"
                 ]
             },
-            "initialShareValue": 1,
+            "initialShareValue": 1.08,
             "currentShareValue": 1.82,
             "expectedReturnPerYear": "7.36% (par an)",
             "amountOfCurrentRents": 4385616,
             "amountOfPotentialRents": 4752917,
             "treasury": 3986223,
-            "potentialReturnPerYear": 0.1040
+            "returnPerYear": 0.1040,
+            "sites":[
+                {
+                    "title":"Blockchain Building",
+                    "investCost":1900000,
+                    "aera":2340,
+                    "img": "/images/pools/discover__pool_1.jfif"
+                },
+                {
+                    "title":"Blockchain Building",
+                    "investCost":1200000,
+                    "aera":1340,
+                    "img": "/images/pools/site_1.jpg"
+                }
+            ]
         },
         {
             "id": "009",
@@ -257,13 +368,13 @@
             "invested": false,
             "title": "KS2Vest",
             "investmentValue": 14250700,
-            "expertValue": 21033100,
+            "expertValue": 21032100,
             "location": {
                 "city":"Paris",
                 "country":"France"
             },
             "creationDate": "10 juin 2023",
-            "numberOfNFTs":37153996,
+            "numberOfNFTs":77153996,
             "movementOver12Months": "12.84%",
             "diversification": {
                 "location": "Diversification Hotelerie",
@@ -279,7 +390,21 @@
             "amountOfCurrentRents": 4385616,
             "amountOfPotentialRents": 4752917,
             "treasury": 3986223,
-            "potentialReturnPerYear": 0.1040
+            "returnPerYear": 0.1040,
+            "sites":[
+                {
+                    "title":"Blockchain Building",
+                    "investCost":1900000,
+                    "aera":2340,
+                    "img": "/images/pools/discover__pool_1.jfif"
+                },
+                {
+                    "title":"Blockchain Building",
+                    "investCost":1200000,
+                    "aera":1340,
+                    "img": "/images/pools/site_1.jpg"
+                }
+            ]
         },
         {
             "id": "010",
@@ -288,13 +413,13 @@
             "invested": false,
             "title": "KS2Vest",
             "investmentValue": 10050700,
-            "expertValue": 21033100,
+            "expertValue": 71033100,
             "location": {
                 "city":"Paris",
                 "country":"France"
             },
             "creationDate": "10 juin 2023",
-            "numberOfNFTs":37153996,
+            "numberOfNFTs":65153996,
             "movementOver12Months": "12.84%",
             "diversification": {
                 "location": "Diversification Hotelerie",
@@ -310,7 +435,21 @@
             "amountOfCurrentRents": 4385616,
             "amountOfPotentialRents": 4752917,
             "treasury": 3986223,
-            "potentialReturnPerYear": 0.1040
+            "returnPerYear": 0.1040,
+            "sites":[
+                {
+                    "title":"Blockchain Building",
+                    "investCost":1900000,
+                    "aera":2340,
+                    "img": "/images/pools/discover__pool_1.jfif"
+                },
+                {
+                    "title":"Blockchain Building",
+                    "investCost":1200000,
+                    "aera":1340,
+                    "img": "/images/pools/site_1.jpg"
+                }
+            ]
         }
     ]
 }

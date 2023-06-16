@@ -61,6 +61,20 @@ app.get("/data/pool/:id", (req, res) => {
     }
   });
 });
+const orderResult = (req, returnArray, key)=> {
+  const key_order = 'order-'+key;
+  if(req.query[key_order] && req.query[key_order]!='') {
+    if(req.query[key_order]=="1") {
+      // console.log(`order by ${key} ASC`);
+      returnArray.sort((a,b)=>a[key]-b[key]);
+    }
+    if(req.query[key_order]=="-1") {
+      // console.log(`order by ${key} DESC`);
+      returnArray.sort((a,b)=>b[key]-a[key]);
+    }
+  }
+  return returnArray;
+}
 app.get("/data/pools", (req, res) => {
     // setAccessOrigin(res);
     let count = 10;
@@ -72,19 +86,31 @@ app.get("/data/pools", (req, res) => {
       }
       res.setHeader("Content-Type", "application/json");
       const json = JSON.parse(data);
-      const tmpArray = [];
+      let tmpArray = [];
       const returnArray = [];
       json.pools.forEach((element, i) => {
-        tmpArray.push(element);
+        if(req.query.location && req.query.location!="") {
+          if(req.query.location.toLowerCase() == element.location.city.toLowerCase()){
+            tmpArray.push(element);
+          }
+        } else {
+          tmpArray.push(element);
+        }
       });
-      if(req.query.investmentValue && req.query.investmentValue!='') { 
-        if(req.query.investmentValue=="1") {
-          tmpArray.sort((a,b)=>a.investmentValue-b.investmentValue);
-        }
-        if(req.query.investmentValue=="-1") {
-          tmpArray.sort((a,b)=>b.investmentValue-a.investmentValue);
-        }
-      }
+      // FITER LOCATION
+      
+      // ORDER
+      tmpArray = orderResult(req, tmpArray, "investmentValue");
+      tmpArray = orderResult(req, tmpArray, "expertValue");
+      tmpArray = orderResult(req, tmpArray, "numberOfNFTs");
+      tmpArray = orderResult(req, tmpArray, "initialShareValue");
+      tmpArray = orderResult(req, tmpArray, "currentShareValue");
+      tmpArray = orderResult(req, tmpArray, "expectedReturnPerYear");
+      tmpArray = orderResult(req, tmpArray, "amountOfCurrentRents");
+      tmpArray = orderResult(req, tmpArray, "amountOfPotentialRents");
+      tmpArray = orderResult(req, tmpArray, "treasury");
+      tmpArray = orderResult(req, tmpArray, "potentialReturnPerYear");
+      // FILTER COUNT
       tmpArray.forEach((element, i) => {
         if (i < count) {
           returnArray.push(element);

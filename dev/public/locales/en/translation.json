@@ -1,5 +1,7 @@
 {
     "misc": {
+        "sort":"Sort",
+        "filters":"Filters",
         "decimalSeparator": ",",
         "thousandSeparator": "."
     },
@@ -49,7 +51,7 @@
     },
     "pool": {
         "more": "View more Investment Pools",
-        "invest": "INVESTMENT",
+        "invest": "Investment",
         "expertise": "Expertise at",
         "initialValue": "Initial Value of the Share",
         "currentValue": "Current Value of the Share",

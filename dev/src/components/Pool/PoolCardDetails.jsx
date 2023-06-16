@@ -75,25 +75,25 @@ export default function PoolCardDetails(props) {
                             <div className={styles.pool_detail_frame_pool_card_footer}>
                                 <ul>
                                     <li>
-                                        <p><Trans t={t}>pool.creationDate</Trans> :</p>
+                                        <p><Trans t={t}>pool.creationDate</Trans></p>
                                         <span>{pool.data.creationDate}</span>
                                     </li>
                                     <li>
-                                        <p><Trans t={t}>pool.numberOfNFTs</Trans> :</p>
+                                        <p><Trans t={t}>pool.numberOfNFTs</Trans></p>
                                         <span>{pool.data.numberOfNFTs}</span>
                                     </li>
                                     <li>
-                                        <p><Trans t={t}>pool.initialShareValue</Trans> :</p>
+                                        <p><Trans t={t}>pool.initialShareValue</Trans></p>
                                         <span>{formatEuro(pool.data.initialShareValue)}</span>
                                     </li>
                                     <li>
-                                        <p><Trans t={t}>pool.currentShareValue</Trans> :</p>
+                                        <p><Trans t={t}>pool.currentShareValue</Trans></p>
                                         <span>
                                             <b>{formatEuro(pool.data.currentShareValue)}</b>
                                         </span>
                                     </li>
                                     <li className={styles.fullWidth}>
-                                        <p><Trans t={t}>pool.movementOver12Months</Trans> :</p>
+                                        <p><Trans t={t}>pool.movementOver12Months</Trans></p>
                                         <span>{pool.data.movementOver12Months}</span>
                                     </li>
                                 </ul>
@@ -104,40 +104,40 @@ export default function PoolCardDetails(props) {
             </div>
             <div className={styles.pool_detail_extra}>
                 <div className={styles.pool_detail_info}>
-                    <h1 style={{ backgroundImage: "url('/images/Iconsax/note.svg')" }}><Trans t={t}>pool.info</Trans></h1>
+                    <h1><Trans t={t}>pool.info</Trans></h1>
                     {pool.isLoading ? (
                         <>
                             <ul style={{ opacity: 0.5 }}>
                                 <li>
-                                    <p><Trans t={t}>pool.investmentValue</Trans> :</p>
+                                    <p><Trans t={t}>pool.investmentValue</Trans></p>
                                     <span></span>
                                 </li>
                                 <li>
-                                    <p><Trans t={t}>pool.expertValue</Trans> :</p>
+                                    <p><Trans t={t}>pool.expertValue</Trans></p>
                                     <span></span>
                                 </li>
                                 <li>
-                                    <p><Trans t={t}>pool.theoreticalCapitalGain</Trans> :</p>
+                                    <p><Trans t={t}>pool.theoreticalCapitalGain</Trans></p>
                                     <span></span>
                                 </li>
                                 <li>
-                                    <p><Trans t={t}>pool.amountOfCurrentRents</Trans> :</p>
+                                    <p><Trans t={t}>pool.amountOfCurrentRents</Trans></p>
                                     <span></span>
                                 </li>
                                 <li>
-                                    <p><Trans t={t}>pool.amountOfPotentialRents</Trans> :</p>
+                                    <p><Trans t={t}>pool.amountOfPotentialRents</Trans></p>
                                     <span></span>
                                 </li>
                                 <li>
-                                    <p><Trans t={t}>pool.returnPerYear</Trans> :</p>
+                                    <p><Trans t={t}>pool.returnPerYear</Trans></p>
                                     <span></span>
                                 </li>
                                 <li>
-                                    <p><Trans t={t}>pool.potentialReturnPerYear</Trans> :</p>
+                                    <p><Trans t={t}>pool.potentialReturnPerYear</Trans></p>
                                     <span></span>
                                 </li>
                                 <li>
-                                    <p><Trans t={t}>pool.treasury</Trans> :</p>
+                                    <p><Trans t={t}>pool.treasury</Trans></p>
                                     <span></span>
                                 </li>
                             </ul>
@@ -146,57 +146,79 @@ export default function PoolCardDetails(props) {
                         <>
                             <ul>
                                 <li>
-                                    <p><Trans t={t}>pool.investmentValue</Trans> :</p>
+                                    <p><Trans t={t}>pool.investmentValue</Trans></p>
                                     <span>
                                         <b>{formatEuro(pool.data.investmentValue, t("misc.decimalSeparator"), t("misc.thousandSeparator"))}</b>
                                     </span>
                                 </li>
                                 <li>
-                                    <p><Trans t={t}>pool.expertValue</Trans> :</p>
+                                    <p><Trans t={t}>pool.expertValue</Trans></p>
                                     <span>
                                         <b>{formatEuro(pool.data.expertValue, t("misc.decimalSeparator"), t("misc.thousandSeparator"))}</b>
                                     </span>
                                 </li>
                                 <li>
-                                    <p><Trans t={t}>pool.theoreticalCapitalGain</Trans> :</p>
+                                    <p><Trans t={t}>pool.theoreticalCapitalGain</Trans></p>
                                     <span>
                                         {formatEuro(pool.data.expertValue - pool.data.investmentValue, t("misc.decimalSeparator"), t("misc.thousandSeparator"))}
                                     </span>
                                 </li>
                                 <li>
-                                    <p><Trans t={t}>pool.amountOfCurrentRents</Trans> :</p>
+                                    <p><Trans t={t}>pool.amountOfCurrentRents</Trans></p>
                                     <span>
                                         <span>{formatEuro(pool.data.amountOfCurrentRents, t("misc.decimalSeparator"), t("misc.thousandSeparator"))}</span>
                                     </span>
                                 </li>
                                 <li>
-                                    <p><Trans t={t}>pool.amountOfPotentialRents</Trans> :</p>
+                                    <p><Trans t={t}>pool.amountOfPotentialRents</Trans></p>
                                     <span>{formatEuro(pool.data.amountOfPotentialRents, t("misc.decimalSeparator"), t("misc.thousandSeparator"))}</span>
                                 </li>
                                 <li>
-                                    <p><Trans t={t}>pool.returnPerYear</Trans> :</p>
+                                    <p><Trans t={t}>pool.returnPerYear</Trans></p>
+                                    <span>
+                                        {formatPercent(pool.data.returnPerYear, t("misc.decimalSeparator"), t("misc.thousandSeparator"))}
+                                    </span>
+                                </li>
+                                <li>
+                                    <p><Trans t={t}>pool.potentialReturnPerYear</Trans></p>
                                     <span>
                                         {formatPercent((pool.data.amountOfPotentialRents - pool.data.amountOfCurrentRents) / pool.data.amountOfCurrentRents, t("misc.decimalSeparator"), t("misc.thousandSeparator"))}
                                     </span>
                                 </li>
                                 <li>
-                                    <p><Trans t={t}>pool.potentialReturnPerYear</Trans> :</p>
-                                    <span>
-                                        {formatPercent(pool.data.potentialReturnPerYear, t("misc.decimalSeparator"), t("misc.thousandSeparator"))}
-                                    </span>
-                                </li>
-                                <li>
-                                    <p><Trans t={t}>pool.treasury</Trans> :</p>
+                                    <p><Trans t={t}>pool.treasury</Trans></p>
                                     <span>{formatEuro(pool.data.treasury, t("misc.decimalSeparator"), t("misc.thousandSeparator"))}</span>
                                 </li>
                             </ul>
                         </>
                     )}
                 </div>
-                <div>
-                    <h1 style={{ backgroundImage: "url('/images/Iconsax/buildings2.svg')" }} >
+                <div className={styles.pool_detail_sites}>
+                    <h1>
                         <Trans t={t}>pool.sites</Trans>
                     </h1>
+                    {pool.isLoading ? (
+                        <>
+                            <h1>Loading</h1>
+                        </>
+                    ) : (
+                        <>
+                            <div className={styles.pool_detail_sites_content}>
+                                <ul>
+                                    {pool.data.sites.map(function (element, i) {
+                                        return <li key={i}>
+                                            <figure style={{ backgroundImage: 'url(' + element.img + ')' }}></figure>
+                                            <h2>{element.title}</h2>
+                                        </li>;
+                                    })}
+                                </ul>
+                            </div>
+                        </>
+                    )}
+
+
+
+
                 </div>
             </div>
             {/* <PoolCard element={pool.data} /> */}

@@ -1,5 +1,7 @@
 {
     "misc": {
+        "sort":"Classement",
+        "filters":"Filtres",
         "decimalSeparator":".",
         "thousandSeparator":" "
     },
@@ -49,7 +51,7 @@
     },
     "pool": {
         "more": "Voir plus de Pools d’investissements",
-        "invest": "INVESTISSEMENT",
+        "invest": "investissement",
         "expertise": "Expertisé à",
         "initialValue": "Valeur initial de l’action",
         "currentValue": "Valeur actuel de l’action",
