@@ -7,10 +7,11 @@ $width_breakpoint1: 1250px;
 $width_breakpoint2: 900px;
 $width_breakpoint3: 600px;
 $width_breakpoint4: 500px;
+$color_BACKGROUND:#00120e;
 :root {
     --color_KRYPTO-GREEN: #b5d09f;
     --color_KRYPTO-SEC: #2d584e;
-    --color_BACKGROUND: #00120e;
+    --color_BACKGROUND: #{$color_BACKGROUND};
     --color_BACKGROUND-LIGHT: #001712;
     --color_BACKGROUND-LIGHT-2: #04251d;
     --color_SMALL-TEXT: #79ffaf;
@@ -18,5 +19,11 @@ $width_breakpoint4: 500px;
     --color_BACKGROUND-LIGHTER: #04251d;
     --width_margin: calc((100vw - $width_main) / 2);
     --width_margin_ratio: calc((100vw / $width_main));
+
+    --ease-expo-in-out: cubic-bezier(0.87, 0, 0.13, 1); // Expo-In-Out
+    --ease-expo-out: cubic-bezier(0.16, 1, 0.3, 1); // Expo-Out
+    --ease-expo-in: cubic-bezier(0.7, 0, 0.84, 0); // Expo-In
+
+    --max-height-filters:400px;
 
 }

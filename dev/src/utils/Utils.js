@@ -23,3 +23,8 @@ export const formatInc = (_number) => {
     if(_number<10) return "0"+_number;
     return _number;
 }
+export const formatDate = (dateString, locale) => {
+    // const date = new Date(dateString);
+    const options = { year: "numeric", month: "long", day: "numeric" }
+    return new Date(dateString).toLocaleDateString(locale, options)
+}

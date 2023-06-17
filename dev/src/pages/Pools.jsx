@@ -5,10 +5,13 @@ import { SectionTitle } from "../components/SectionTemplates";
 import useFetchData from "../utils/useFetchData";
 import { useState } from "react";
 import Filters from "../components/Filters/Filters";
+import useApp from "../store/useApp";
 
-const objFilter = {
+let objFilter = {
+  "namespace":"pools",
   "service":"/data/pools",
   "url":"/data/pools?count=10&location=",
+  "localeNamespace":"pool.",
   "orderBy":{
     "value":"investmentValue",
     "direction":"",
@@ -16,6 +19,10 @@ const objFilter = {
       {
         "value":"investmentValue",
         "label":"Investment Value"
+      },
+      {
+        "value":"creationDate",
+        "label":"Date de creation"
       },
       {
         "value":"expertValue",
@@ -82,6 +89,9 @@ const objFilter = {
 export default function Pools(props) {
   console.log('RENDER Pools');
   const { t } = useTranslation();
+  if(useApp.getState().savedFilters[objFilter.namespace]!==undefined){
+    objFilter = useApp.getState().savedFilters[objFilter.namespace];
+  }
   const [filtersData, setFiltersData] = useState(objFilter);
 
   

@@ -1,8 +1,12 @@
 import styles from "../../style/style.module.scss";
 import { NavLink } from "react-router-dom";
-import { formatEuro, formatPercent } from "../../utils/Utils";
+
+import { formatDate, formatEuro, formatPercent } from "../../utils/Utils";
+
 import { Trans, useTranslation } from "react-i18next";
 import PoolCard from "./PoolCard";
+import { useContext } from "react";
+import LocaleContext from "../../LocaleContext";
 
 
 
@@ -10,6 +14,7 @@ export default function PoolCardDetails(props) {
     const pool = props.pool;
     const hasLink = props.hasLink;
     const hasValue = props.hasValue;
+    const { locale } = useContext(LocaleContext);
     const { t } = useTranslation();
     // if (pool.isLoading) return (
     //     <div className={styles.section_frame__top + " " + styles.pool_detail_frame} >
@@ -76,7 +81,7 @@ export default function PoolCardDetails(props) {
                                 <ul>
                                     <li>
                                         <p><Trans t={t}>pool.creationDate</Trans></p>
-                                        <span>{pool.data.creationDate}</span>
+                                        <span>{formatDate(pool.data.creationDate, locale)}</span>
                                     </li>
                                     <li>
                                         <p><Trans t={t}>pool.numberOfNFTs</Trans></p>

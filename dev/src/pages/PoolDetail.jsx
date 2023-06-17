@@ -1,12 +1,7 @@
 import { useParams } from "react-router-dom";
-import PoolCard from "../components/Pool/PoolCard";
-import useFetch from "react-fetch-hook";
 import styles from "../style/style.module.scss";
 import { NavLink } from "react-router-dom";
-import { formatEuro, formatPercent } from "../utils/Utils";
 import { Trans, useTranslation } from "react-i18next";
-import useApp from "../store/useApp";
-import { useEffect } from "react";
 import PoolCardDetails from "../components/Pool/PoolCardDetails";
 import useFetchData from "../utils/useFetchData";
 

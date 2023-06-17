@@ -1,6 +1,6 @@
 import styles from "../../style/style.module.scss";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function FilterUnit(props) {
     const data = props.data;
@@ -28,27 +28,35 @@ function FilterUnit(props) {
     )
 }
 export default function Filter(props) {
-    const [label, setLabel] = useState("");
+    console.warn('RENDER FILTER',props.filters)
+    const getLabel = (_filters) => {
+        let params = [];
+        for (const key in _filters.filterBy) {
+            const element = _filters.filterBy[key];
+            if(element.value!==""&& element.showInUi==true) params.push(element.value);
+        }
+        if(params.length!=0){
+            return (`(${params.join(',')})`);
+        } else {
+            return ``;
+        }
+    }
+    const [label, setLabel] = useState(getLabel(props.filters));
     const {t} = useTranslation();
     const filters = props.filters;
     const setFilter = props.setFilter;
     const filterChanged = (e) => {
         const _filters = JSON.parse(JSON.stringify(filters));
-        let params = [];
         for (const key in _filters.filterBy) {
             const element = _filters.filterBy[key];
             if (element.name == e.name) {
                 element.value = e.value;
             }
-            if(element.value!==""&& element.showInUi==true) params.push(element.value);
         }
-        if(params.length!=0){
-            setLabel(`(${params.join(',')})`);
-        } else {
-            setLabel(``);
-        }
+        setLabel(getLabel(_filters));
         setFilter((prevVal) => { console.warn("SETfilters"); return _filters });
     }
+    //
     return (
         <>
             <div className={styles.filter}>

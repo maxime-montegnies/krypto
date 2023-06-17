@@ -4,9 +4,11 @@ import { SectionTitle } from "../components/SectionTemplates";
 import useFetchData from "../utils/useFetchData";
 import Filters from "../components/Filters/Filters";
 import { useEffect, useState } from "react";
+import useApp from "../store/useApp";
 
 
-const objFilter = {
+let objFilter = {
+  "namespace":"randomuser.me",
   "service":"https://randomuser.me/api/",
   "url":"https://randomuser.me/api/?gender=&results=10",
   "filterBy":
@@ -79,6 +81,9 @@ const objFilter = {
 
 export default function Marketplace(props) {
   console.log('RENDER Marketplace');
+  if(useApp.getState().savedFilters[objFilter.namespace]!==undefined){
+    objFilter = useApp.getState().savedFilters[objFilter.namespace];
+  }
   const { t } = useTranslation();
   const [filtersData, setFiltersData] = useState(objFilter);
 

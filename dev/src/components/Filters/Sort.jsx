@@ -8,6 +8,8 @@ function SortUnit(props) {
     const value = props.value;
     const direction = props.direction;
     const currentValue = value==data.value?direction:'';
+    const localeNamespace = props.filters.localeNamespace?props.filters.localeNamespace:"";
+    // const localeNamespace = "";
     const filterChanged = (e) => {
         const retObj = {};
         retObj.name = e.target.name;
@@ -27,17 +29,7 @@ function SortUnit(props) {
     // const className = styles.right;
     return (
         <li >
-
-            {/* 
-            <span>{data.label} : </span>
-            <select onChange={filterChanged} name={data.value} value={currentValue}>
-                <option value="" disabled>Noop</option>
-                <option value="1">ASC</option>
-                <option value="-1">DESC</option>
-            </select>
-             */}
-             
-             <button  onClick={filterClicked} data-name={data.value} data-value={currentValue} className={styles.filters_sort + " " + (currentValue=="-1"?styles.down:currentValue=="1"?styles.up:"") + " " +currentValue} >{t("pool."+data.value)}</button>
+            <button  onClick={filterClicked} data-name={data.value} data-value={currentValue} className={styles.filters_sort + " " + (currentValue=="-1"?styles.down:currentValue=="1"?styles.up:"") + " " +currentValue} >{t(localeNamespace+data.value)}</button>
         </li>
     )
 }
@@ -47,11 +39,12 @@ export default function Sort(props) {
     const {t} = useTranslation();
     console.log("RENDER SORTS RENDER SORTSRENDER SORTS ", props.filters.orderBy.value)
     const setFilter = props.setFilter;
+    const localeNamespace = props.filters.localeNamespace?props.filters.localeNamespace:"";
     const filterChanged = (e) => {
         const _filters = JSON.parse(JSON.stringify(props.filters));
         _filters.orderBy.value = e.name;
         _filters.orderBy.direction = e.value;
-        setLabel(`(${_filters.orderBy.value})`);
+        setLabel(`(${t(localeNamespace+_filters.orderBy.value)})`);
         setFilter((prevVal) => { console.warn("SETfilters", _filters); return _filters });
     }
     return (
