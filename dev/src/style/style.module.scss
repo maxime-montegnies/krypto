@@ -547,6 +547,18 @@ input {
 
 .home_discover__pool {
   .home_discover__pool__content {
+    &.grid{
+      
+    }
+    &.list{
+      
+      ul{
+        li{
+          height: 121px;
+          width: 100%!important;
+        }
+      }
+    }
     .loader {
       position: relative;
       width: 100%;
@@ -774,6 +786,22 @@ input {
             background-color: white;
           }
         }
+      }
+    }
+  }
+}
+// LIST
+// LIST
+// LIST
+// LIST
+.list{
+  .pool_card,
+  .pool_card_see_more,
+  .pool_card_more_soon {
+    .content {
+      flex-direction: row;
+      h1{
+        color:red;
       }
     }
   }
@@ -1706,18 +1734,24 @@ input {
   padding: 15px;
   &>div{
     max-height: 22px;
-    transition: max-height 1s var(--ease-expo-out) !important;
+    transition: max-height 1s var(--ease-expo-out);
     pointer-events: none;
     overflow: hidden;
   }
   .filtersOpener {
+    user-select: none;
     z-index: -1;
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 30px);
     // background-color: red;
     opacity: 0;
     cursor: pointer;
+    // accent-color: #9b59b6;
+    &:focus {
+      opacity: 0;
+      // width: 0;
+    }
     &:checked {
       // width: 160px;
       cursor: auto;
@@ -1746,6 +1780,7 @@ input {
   &:has(.filtersOpener:checked) {
     // height: fit-content;
     &>div{
+      transition-timing-function: var(--ease-expo-out);
       max-height: var(--max-height-filters);
     }
 
@@ -1801,6 +1836,11 @@ input {
         background-image: url("/images/Iconsax/clipboard-import.svg");
       }
     }
+    &.layout {
+      h1 {
+        background-image: url("/images/Iconsax/task-square.svg");
+      }
+    }
 
     ul {
       transition: opacity 1s;
@@ -1823,7 +1863,8 @@ input {
 
         label,
         select,
-        button {
+        button,
+        a {
           cursor: pointer;
           pointer-events: auto;
         }

@@ -12,6 +12,7 @@ let objFilter = {
   "service":"/data/pools",
   "url":"/data/pools?count=10&location=",
   "localeNamespace":"pool.",
+  "layout":true,
   "orderBy":{
     "value":"investmentValue",
     "direction":"",
@@ -98,12 +99,15 @@ export default function Pools(props) {
   // const pools = useFetchData("/data/pools" + addParams(filtersData), [filtersData]);
   const pools = useFetchData(filtersData.url, [filtersData]);
   // const pools = useFetchData("/data/pools?count=100");
+  // const filtersLayout = useApp.getState().filtersLayout
+  const filtersLayout = useApp((state)=>state.filtersLayout)
+  console.warn("🤷‍♂️🤷‍♂️🤷‍♂️🤷‍♂️", filtersLayout);
   return (
     <>
       <SectionTitle title={t("pools.title")} subtitle={t("pools.subtitle")} text={t("pools.text")} />
       <Filters setFilter={setFiltersData} filters={filtersData} />
       <div className={styles.home_discover__pool + " slide-in"}>
-        <div className={styles.home_discover__pool__content}>
+        <div className={styles.home_discover__pool__content + " " + styles[filtersLayout]}>
           <ul>
             {pools.isLoading ? (
               <>

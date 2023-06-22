@@ -26,5 +26,5 @@ export const formatInc = (_number) => {
 export const formatDate = (dateString, locale) => {
     // const date = new Date(dateString);
     const options = { year: "numeric", month: "long", day: "numeric" }
-    return new Date(dateString).toLocaleDateString(locale, options)
+    return new Date(dateString+'T03:24:00').toLocaleDateString(locale, options)
 }

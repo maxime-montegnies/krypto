@@ -6,11 +6,21 @@ export default create(subscribeWithSelector((set) => {
         updateIntersectionObserver: false,
         login: false,
         savedFilters: {},
+        filtersLayout: "list",
         setLogin: async (login) => {
             set((state) => {
                 if (state.login !== login) {
                     console.warn('SET login', login)
                     return { login: login }
+                }
+                return {}
+            })
+        },
+        setFiltersLayout: async (filtersLayout) => {
+            set((state) => {
+                if (state.filtersLayout !== filtersLayout) {
+                    console.warn('SET filtersLayout', filtersLayout)
+                    return { filtersLayout: filtersLayout }
                 }
                 return {}
             })

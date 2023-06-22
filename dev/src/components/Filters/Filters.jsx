@@ -3,6 +3,7 @@ import styles from "../../style/style.module.scss";
 import Filter from "./Filter";
 import Sort from "./Sort";
 import useApp from "../../store/useApp";
+import Layout from "./Layout";
 
 export default function Filters(props) {
     const setSavedFilters = useApp((state) => state.setSavedFilters);
@@ -36,6 +37,9 @@ export default function Filters(props) {
             }
             {props.filters.orderBy &&
                 <Sort setFilter={setFilter} filters={props.filters} />
+            }
+            {props.filters.layout &&
+                <Layout setFilter={setFilter} filters={props.filters} />
             }
             </div>
             </div>

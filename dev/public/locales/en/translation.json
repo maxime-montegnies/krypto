@@ -1,5 +1,6 @@
 {
     "misc": {
+        "layout":"Layout",
         "sort":"Sort",
         "filters":"Filters",
         "decimalSeparator": ",",

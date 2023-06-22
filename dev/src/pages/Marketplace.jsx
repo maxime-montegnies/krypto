@@ -11,6 +11,7 @@ let objFilter = {
   "namespace":"randomuser.me",
   "service":"https://randomuser.me/api/",
   "url":"https://randomuser.me/api/?gender=&results=10",
+  "layout":false,
   "filterBy":
     [
       {
