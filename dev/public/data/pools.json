@@ -15,7 +15,7 @@
             ,
             "creationDate": "2023-06-14",
             "numberOfNFTs":7153996,
-            "movementOver12Months": "12.84%",
+            "movementOver12Months": 0.1284,
             "diversification": {
                 "location": "Diversification en France",
                 "detail": [
@@ -35,14 +35,23 @@
                 {
                     "title":"Blockchain Building",
                     "investCost":1900000,
-                    "aera":2340,
+                    "area":2340,
+                    "location":"Metz, France",
                     "img": "/images/pools/discover__pool_1.jfif"
                 },
                 {
                     "title":"Blockchain Building",
+                    "investCost":1400000,
+                    "area":1640,
+                    "location":"Metz, France",
+                    "img": "/images/pools/discover__pool_2.jfif"
+                },
+                {
+                    "title":"Blockchain Building",
                     "investCost":1200000,
-                    "aera":1340,
-                    "img": "/images/pools/site_1.jpg"
+                    "area":1340,
+                    "location":"Metz, France",
+                    "img": "/images/pools/site_1.jpeg"
                 }
             ]
         },
@@ -60,7 +69,7 @@
             },
             "creationDate": "2023-06-15",
             "numberOfNFTs":17153996,
-            "movementOver12Months": "12.84%",
+            "movementOver12Months": 0.1284,
             "diversification": {
                 "location": "Diversification en Europe",
                 "detail": [
@@ -80,14 +89,16 @@
                 {
                     "title":"Blockchain Building",
                     "investCost":1900000,
-                    "aera":2340,
+                    "area":2340,
+                    "location":"Metz, France",
                     "img": "/images/pools/discover__pool_1.jfif"
                 },
                 {
                     "title":"Blockchain Building",
                     "investCost":1200000,
-                    "aera":1340,
-                    "img": "/images/pools/site_1.jpg"
+                    "area":1340,
+                    "location":"Metz, France",
+                    "img": "/images/pools/site_1.jpeg"
                 }
             ]
         },
@@ -105,7 +116,7 @@
             },
             "creationDate": "2023-06-15",
             "numberOfNFTs":153996,
-            "movementOver12Months": "12.84%",
+            "movementOver12Months": 0.1284,
             "diversification": {
                 "location": "Diversification en France-Roumanie",
                 "detail": [
@@ -125,14 +136,16 @@
                 {
                     "title":"Blockchain Building",
                     "investCost":1900000,
-                    "aera":2340,
+                    "area":2340,
+                    "location":"Metz, France",
                     "img": "/images/pools/discover__pool_1.jfif"
                 },
                 {
                     "title":"Blockchain Building",
                     "investCost":1200000,
-                    "aera":1340,
-                    "img": "/images/pools/site_1.jpg"
+                    "area":1340,
+                    "location":"Metz, France",
+                    "img": "/images/pools/site_1.jpeg"
                 }
             ]
         },
@@ -150,7 +163,7 @@
             },
             "creationDate": "2023-06-15",
             "numberOfNFTs":1653996,
-            "movementOver12Months": "12.84%",
+            "movementOver12Months": 0.1284,
             "diversification": {
                 "location": "Diversification Hotelerie",
                 "detail": [
@@ -170,14 +183,16 @@
                 {
                     "title":"Blockchain Building",
                     "investCost":1900000,
-                    "aera":2340,
+                    "area":2340,
+                    "location":"Paris, France",
                     "img": "/images/pools/discover__pool_1.jfif"
                 },
                 {
                     "title":"Blockchain Building",
                     "investCost":1200000,
-                    "aera":1340,
-                    "img": "/images/pools/site_1.jpg"
+                    "area":1340,
+                    "location":"Paris, France",
+                    "img": "/images/pools/site_1.jpeg"
                 }
             ]
         },
@@ -195,7 +210,7 @@
             },
             "creationDate": "2023-06-15",
             "numberOfNFTs":13153996,
-            "movementOver12Months": "12.84%",
+            "movementOver12Months": 0.1284,
             "diversification": {
                 "location": "Diversification Hotelerie",
                 "detail": [
@@ -215,14 +230,16 @@
                 {
                     "title":"Blockchain Building",
                     "investCost":1900000,
-                    "aera":2340,
+                    "area":2340,
+                    "location":"Paris, France",
                     "img": "/images/pools/discover__pool_1.jfif"
                 },
                 {
                     "title":"Blockchain Building",
                     "investCost":1200000,
-                    "aera":1340,
-                    "img": "/images/pools/site_1.jpg"
+                    "area":1340,
+                    "location":"Paris, France",
+                    "img": "/images/pools/site_1.jpeg"
                 }
             ]
         },
@@ -240,7 +257,7 @@
             },
             "creationDate": "2023-06-15",
             "numberOfNFTs":3996,
-            "movementOver12Months": "12.84%",
+            "movementOver12Months": 0.1284,
             "diversification": {
                 "location": "Diversification Hotelerie",
                 "detail": [
@@ -260,14 +277,16 @@
                 {
                     "title":"Blockchain Building",
                     "investCost":1900000,
-                    "aera":2340,
+                    "area":2340,
+                    "location":"Paris, France",
                     "img": "/images/pools/discover__pool_1.jfif"
                 },
                 {
                     "title":"Blockchain Building",
                     "investCost":1200000,
-                    "aera":1340,
-                    "img": "/images/pools/site_1.jpg"
+                    "area":1340,
+                    "location":"Paris, France",
+                    "img": "/images/pools/site_1.jpeg"
                 }
             ]
         },
@@ -285,7 +304,7 @@
             },
             "creationDate": "2023-06-15",
             "numberOfNFTs":996,
-            "movementOver12Months": "12.84%",
+            "movementOver12Months": 0.1284,
             "diversification": {
                 "location": "Diversification Hotelerie",
                 "detail": [
@@ -305,14 +324,16 @@
                 {
                     "title":"Blockchain Building",
                     "investCost":1900000,
-                    "aera":2340,
+                    "area":2340,
+                    "location":"Paris, France",
                     "img": "/images/pools/discover__pool_1.jfif"
                 },
                 {
                     "title":"Blockchain Building",
                     "investCost":1200000,
-                    "aera":1340,
-                    "img": "/images/pools/site_1.jpg"
+                    "area":1340,
+                    "location":"Paris, France",
+                    "img": "/images/pools/site_1.jpeg"
                 }
             ]
         },
@@ -330,7 +351,7 @@
             },
             "creationDate": "2023-06-15",
             "numberOfNFTs":37996,
-            "movementOver12Months": "12.84%",
+            "movementOver12Months": 0.1284,
             "diversification": {
                 "location": "Diversification Hotelerie",
                 "detail": [
@@ -350,14 +371,16 @@
                 {
                     "title":"Blockchain Building",
                     "investCost":1900000,
-                    "aera":2340,
+                    "area":2340,
+                    "location":"Paris, France",
                     "img": "/images/pools/discover__pool_1.jfif"
                 },
                 {
                     "title":"Blockchain Building",
                     "investCost":1200000,
-                    "aera":1340,
-                    "img": "/images/pools/site_1.jpg"
+                    "area":1340,
+                    "location":"Paris, France",
+                    "img": "/images/pools/site_1.jpeg"
                 }
             ]
         },
@@ -375,7 +398,7 @@
             },
             "creationDate": "2023-06-15",
             "numberOfNFTs":77153996,
-            "movementOver12Months": "12.84%",
+            "movementOver12Months": 0.1284,
             "diversification": {
                 "location": "Diversification Hotelerie",
                 "detail": [
@@ -395,14 +418,16 @@
                 {
                     "title":"Blockchain Building",
                     "investCost":1900000,
-                    "aera":2340,
+                    "area":2340,
+                    "location":"Paris, France",
                     "img": "/images/pools/discover__pool_1.jfif"
                 },
                 {
                     "title":"Blockchain Building",
                     "investCost":1200000,
-                    "aera":1340,
-                    "img": "/images/pools/site_1.jpg"
+                    "area":1340,
+                    "location":"Paris, France",
+                    "img": "/images/pools/site_1.jpeg"
                 }
             ]
         },
@@ -420,7 +445,7 @@
             },
             "creationDate": "2023-06-15",
             "numberOfNFTs":65153996,
-            "movementOver12Months": "12.84%",
+            "movementOver12Months": 0.1284,
             "diversification": {
                 "location": "Diversification Hotelerie",
                 "detail": [
@@ -440,14 +465,16 @@
                 {
                     "title":"Blockchain Building",
                     "investCost":1900000,
-                    "aera":2340,
+                    "area":2340,
+                    "location":"Paris, France",
                     "img": "/images/pools/discover__pool_1.jfif"
                 },
                 {
                     "title":"Blockchain Building",
                     "investCost":1200000,
-                    "aera":1340,
-                    "img": "/images/pools/site_1.jpg"
+                    "area":1340,
+                    "location":"Paris, France",
+                    "img": "/images/pools/site_1.jpeg"
                 }
             ]
         }

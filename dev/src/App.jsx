@@ -4,7 +4,7 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useState } from "react";
 import Layout from "./Layout.jsx";
 import Home from "./pages/Home.jsx";
 import Mint from "./pages/Mint.jsx";
@@ -20,9 +20,11 @@ import i18n from "./i18n";
 import { Helmet } from "react-helmet";
 import useApp from "./store/useApp.jsx";
 import AccountCreate from "./pages/AccountCreate.jsx";
+import {NumberSettings} from "./utils/Utils"
+import { useTranslation } from "react-i18next";
 let observer;
 const updateObserver = () => {
-const observedNodes = document.querySelectorAll('.fade-in, .slide-in');
+  const observedNodes = document.querySelectorAll('.fade-in, .slide-in');
   if (observer) {
     observer.disconnect();
   }
@@ -59,6 +61,7 @@ const Wrapper = ({ children }) => {
 
 export default function App() {
   const [locale, setLocale] = useState(i18n.language);
+  const { t } = useTranslation();
 
   const updateIntersectionObserver = useApp((state) => state.updateIntersectionObserver)
   useEffect(() => {
@@ -77,10 +80,25 @@ export default function App() {
 
   }, [updateIntersectionObserver]);
 
-  i18n.on("languageChanged", (lng) => {
+  console.warn('RENDER APP')
+  const handleLanguageChanged = useCallback(() => {
+    console.warn('LANG CHANGED')
     setLocale(i18n.language)
-  });
-
+    NumberSettings.decimalSeparator = t("misc.decimalSeparator");
+    NumberSettings.thousandSeparator = t("misc.thousandSeparator");
+    NumberSettings.surfaceUnit = t("misc.surfaceUnit");
+    NumberSettings.surfaceMultiplyer = t("misc.surfaceMultiplyer");
+  }, []);
+  useEffect(() => {
+    i18n.on('languageChanged', handleLanguageChanged);
+    return () => {
+      i18n.off('languageChanged', handleLanguageChanged);
+    };
+  }, [handleLanguageChanged]);
+  useEffect(() => {
+    console.warn('i18n.language', i18n.language)
+    handleLanguageChanged()
+  }, []);
   return (
     <>
       <LocaleContext.Provider value={{ locale, setLocale }}>

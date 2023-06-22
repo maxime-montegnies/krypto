@@ -4,7 +4,12 @@
         "sort":"Sort",
         "filters":"Filters",
         "decimalSeparator": ",",
-        "thousandSeparator": "."
+        "thousandSeparator": ".",
+        "surfaceUnit": "sqft",
+        "surfaceMultiplyer": 10.7639,
+        "previous":"Previous",
+        "next":"Next",
+        "legalNotice":"Legal notice"
     },
     "notFound": {
         "title": "This page doesn’t seem to exist...",
@@ -77,7 +82,12 @@
         "returnPerYear": "Return per Year",
         "potentialReturnPerYear": "Potential Return per Year",
         "treasury": "Treasury",
-        "perYear": "(per year)"
+        "perYear": "(per year)",
+
+        "investmentCost":"Investment cost",
+        "area":"Area",
+        "areaCost":"Price/sqft",
+        "consultBuildings":"Consult the buildings of the pool"
     },
     "marketplace": {
         "title": "Buy on the secondary market",

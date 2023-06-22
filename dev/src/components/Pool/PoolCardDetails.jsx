@@ -1,12 +1,13 @@
 import styles from "../../style/style.module.scss";
 import { NavLink } from "react-router-dom";
 
-import { formatDate, formatEuro, formatPercent } from "../../utils/Utils";
+import { formatNumber, formatDate, formatEuro, formatPercent } from "../../utils/Utils";
 
 import { Trans, useTranslation } from "react-i18next";
 import PoolCard from "./PoolCard";
 import { useContext } from "react";
 import LocaleContext from "../../LocaleContext";
+import PoolCardDetailsSite from "./PoolCardDetailsSite";
 
 
 
@@ -85,7 +86,7 @@ export default function PoolCardDetails(props) {
                                     </li>
                                     <li>
                                         <p><Trans t={t}>pool.numberOfNFTs</Trans></p>
-                                        <span>{pool.data.numberOfNFTs}</span>
+                                        <span>{formatNumber(pool.data.numberOfNFTs)}</span>
                                     </li>
                                     <li>
                                         <p><Trans t={t}>pool.initialShareValue</Trans></p>
@@ -99,7 +100,7 @@ export default function PoolCardDetails(props) {
                                     </li>
                                     <li className={styles.fullWidth}>
                                         <p><Trans t={t}>pool.movementOver12Months</Trans></p>
-                                        <span>{pool.data.movementOver12Months}</span>
+                                        <span>{formatPercent(pool.data.movementOver12Months)}</span>
                                     </li>
                                 </ul>
                             </div>
@@ -153,78 +154,54 @@ export default function PoolCardDetails(props) {
                                 <li>
                                     <p><Trans t={t}>pool.investmentValue</Trans></p>
                                     <span>
-                                        <b>{formatEuro(pool.data.investmentValue, t("misc.decimalSeparator"), t("misc.thousandSeparator"))}</b>
+                                        <b>{formatEuro(pool.data.investmentValue)}</b>
                                     </span>
                                 </li>
                                 <li>
                                     <p><Trans t={t}>pool.expertValue</Trans></p>
                                     <span>
-                                        <b>{formatEuro(pool.data.expertValue, t("misc.decimalSeparator"), t("misc.thousandSeparator"))}</b>
+                                        <b>{formatEuro(pool.data.expertValue)}</b>
                                     </span>
                                 </li>
                                 <li>
                                     <p><Trans t={t}>pool.theoreticalCapitalGain</Trans></p>
                                     <span>
-                                        {formatEuro(pool.data.expertValue - pool.data.investmentValue, t("misc.decimalSeparator"), t("misc.thousandSeparator"))}
+                                        {formatEuro(pool.data.expertValue - pool.data.investmentValue)}
                                     </span>
                                 </li>
                                 <li>
                                     <p><Trans t={t}>pool.amountOfCurrentRents</Trans></p>
                                     <span>
-                                        <span>{formatEuro(pool.data.amountOfCurrentRents, t("misc.decimalSeparator"), t("misc.thousandSeparator"))}</span>
+                                        <span>{formatEuro(pool.data.amountOfCurrentRents)}</span>
                                     </span>
                                 </li>
                                 <li>
                                     <p><Trans t={t}>pool.amountOfPotentialRents</Trans></p>
-                                    <span>{formatEuro(pool.data.amountOfPotentialRents, t("misc.decimalSeparator"), t("misc.thousandSeparator"))}</span>
+                                    <span>{formatEuro(pool.data.amountOfPotentialRents)}</span>
                                 </li>
                                 <li>
                                     <p><Trans t={t}>pool.returnPerYear</Trans></p>
                                     <span>
-                                        {formatPercent(pool.data.returnPerYear, t("misc.decimalSeparator"), t("misc.thousandSeparator"))}
+                                        {formatPercent(pool.data.returnPerYear)}
                                     </span>
                                 </li>
                                 <li>
                                     <p><Trans t={t}>pool.potentialReturnPerYear</Trans></p>
                                     <span>
-                                        {formatPercent((pool.data.amountOfPotentialRents - pool.data.amountOfCurrentRents) / pool.data.amountOfCurrentRents, t("misc.decimalSeparator"), t("misc.thousandSeparator"))}
+                                        {formatPercent((pool.data.amountOfPotentialRents - pool.data.amountOfCurrentRents) / pool.data.amountOfCurrentRents)}
                                     </span>
                                 </li>
                                 <li>
                                     <p><Trans t={t}>pool.treasury</Trans></p>
-                                    <span>{formatEuro(pool.data.treasury, t("misc.decimalSeparator"), t("misc.thousandSeparator"))}</span>
+                                    <span>{formatEuro(pool.data.treasury)}</span>
                                 </li>
                             </ul>
                         </>
                     )}
                 </div>
-                <div className={styles.pool_detail_sites}>
-                    <h1>
-                        <Trans t={t}>pool.sites</Trans>
-                    </h1>
-                    {pool.isLoading ? (
-                        <>
-                            <h1>Loading</h1>
-                        </>
-                    ) : (
-                        <>
-                            <div className={styles.pool_detail_sites_content}>
-                                <ul>
-                                    {pool.data.sites.map(function (element, i) {
-                                        return <li key={i}>
-                                            <figure style={{ backgroundImage: 'url(' + element.img + ')' }}></figure>
-                                            <h2>{element.title}</h2>
-                                        </li>;
-                                    })}
-                                </ul>
-                            </div>
-                        </>
-                    )}
 
 
-
-
-                </div>
+                <PoolCardDetailsSite pool={pool} />
             </div>
             {/* <PoolCard element={pool.data} /> */}
         </div>

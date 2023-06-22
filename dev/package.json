@@ -8,7 +8,9 @@
     "dev0": "npm run server & npm run vite",
     "dev": "npm run vite",
     "vite": "vite",
-    "build": "vite build",
+    "build": "npm run copy && npm run builder",
+    "builder": "vite build",
+    "copy": "node copy.js",
     "start": "npm run server --yolo=swag",
     "server": "node server.js",
     "start0": "PORT=8080 node server.js"

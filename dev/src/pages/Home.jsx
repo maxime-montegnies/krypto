@@ -118,6 +118,10 @@ export default function Home({ }) {
           <h3>{t('home.info_subtitle')}</h3>
           <h2>{t('home.info_title')}</h2>
         </div>
+        <div className={styles.home_how}>
+        <img src="/images/graphique.svg" alt="" />
+        {/* <img src="/images/iPad.png" alt="" /> */}
+        </div>
       </div>
 
       <div

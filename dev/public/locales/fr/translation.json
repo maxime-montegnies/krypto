@@ -4,7 +4,12 @@
         "sort":"Classement",
         "filters":"Filtres",
         "decimalSeparator":".",
-        "thousandSeparator":" "
+        "thousandSeparator":" ",
+        "surfaceUnit": "m²",
+        "surfaceMultiplyer": 1.0,
+        "previous":"Précédent",
+        "next":"Suivant",
+        "legalNotice":"Mentions légales"
     },
     "notFound": {
         "title":"Cette page ne semble pas exister...",
@@ -78,7 +83,12 @@
         "returnPerYear":"Rendement par an",
         "potentialReturnPerYear":"Rendement potentiel par an",
         "treasury":"Trésorerie",
-        "perYear": "(par an)"        
+        "perYear": "(par an)",
+
+        "investmentCost":"Coût d’investissement",
+        "area":"Superficie",
+        "areaCost":"Prix/m²",
+        "consultBuildings":"Consultez les bâtiments de la pool"
     },
     "marketplace": {
         "title": "Achetez sur le marché secondaire",

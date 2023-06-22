@@ -11,10 +11,10 @@ const PoolCardContent = (props) => {
     <div className={styles.content}>
       <h1>{element.label}</h1>
       <p>
-        {t("pool.invest")} : <b>{formatEuro(element.investmentValue, t("misc.decimalSeparator"), t("misc.thousandSeparator"))}</b>
+        {t("pool.invest")} : <b>{formatEuro(element.investmentValue)}</b>
       </p>
       <p>
-        {t("pool.expertise")} : <b>{formatEuro(element.expertValue, t("misc.decimalSeparator"), t("misc.thousandSeparator"))}</b>
+        {t("pool.expertise")} : <b>{formatEuro(element.expertValue)}</b>
       </p>
       <div className={styles.diversification}>
         <p>{element.location.city}, {element.location.country}</p>
@@ -28,13 +28,13 @@ const PoolCardContent = (props) => {
       {hasValue && (
         <div className={styles.diversification}>
           <p>
-          {t("pool.initialValue")} : <b>{formatEuro(element.initialShareValue, t("misc.decimalSeparator"), t("misc.thousandSeparator"))}</b>
+          {t("pool.initialValue")} : <b>{formatEuro(element.initialShareValue)}</b>
           </p>
           <p>
-          {t("pool.currentValue")} : <b>{formatEuro(element.currentShareValue, t("misc.decimalSeparator"), t("misc.thousandSeparator"))}</b>
+          {t("pool.currentValue")} : <b>{formatEuro(element.currentShareValue)}</b>
           </p>
           <p>
-          {t("pool.expectedReturn")} : <b>{formatPercent(element.expectedReturnPerYear, t("misc.decimalSeparator"), t("misc.thousandSeparator"))} {t('pool.perYear')}</b>
+          {t("pool.expectedReturn")} : <b>{formatPercent(element.expectedReturnPerYear)} {t('pool.perYear')}</b>
           </p>
         </div>
       )}
